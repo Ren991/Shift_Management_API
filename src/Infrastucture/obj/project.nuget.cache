@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "v/hgO8b9MfYG0lwKjs8uUoIf28v+MOsvXn+dbet57uBclGjVuvdx9wwL6k9QxE2/5G9x6pMaFpZ5fVhu4FyV2Q==",
+  "dgSpecHash": "DXeIAX1CxC6Uy4UCD8eDaL8Q76NAI1Bup7k1DQqOzJT5LbxGyrOzo1P7AcaBt+2l3SbQ8fTdOivwWCkncp2+hg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Infrastucture\\Infrastucture.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Renzo\\.nuget\\packages\\bcrypt\\1.0.0\\bcrypt.1.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"BCrypt 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "BCrypt",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
