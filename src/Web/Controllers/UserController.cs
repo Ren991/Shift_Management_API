@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Application.Models.UserDtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
@@ -7,33 +8,44 @@ namespace Web.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        [HttpGet]
-        public string GetAllUsers()
+        private readonly IUserService _userService;
+        public UserController(IUserService userService)
         {
-            string respuesta = "Acá devuelve todos los usuarios";
-
-            return respuesta;
+            _userService = userService;
         }
 
-        [HttpGet("get-by-email")]
-        public string GetUserByEmail(string email)
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            string respuesta = "El email es " + email;
-            return respuesta;
+
+            var users = _userService.GetAllUsers();
+
+            return Ok(users);
+        }
+
+        [HttpGet("/email")]
+
+        public IActionResult GetByEmail([FromQuery] string email)
+        {
+            return Ok(_userService.GetUserByEmail(email));
         }
 
         [HttpPost]
-        public string AddNewUser()
+
+        public IActionResult AddUser([FromBody] UserCreateRequest user) // Este endpoint es para crear usuario comunes.
+
         {
-            string respuesta = "Se creo correctamente el usuario";
-            return respuesta;
+            var newUser = _userService.AddNewUser(user);
+            return Ok(newUser);
         }
 
-        [HttpDelete("delete-user")]
-        public string DeleteUser()
+        [HttpDelete("{userId}")]
+
+        public IActionResult DeleteUser([FromRoute] int userId)
         {
-            string respuesta = "Usuario eliminado con exito";
-            return respuesta;
+
+            _userService.DeleteUser(userId);
+            return Ok(new { message = "User deleted successfully." });
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Models.UserDtos;
 using Domain.Entities;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,27 +12,35 @@ namespace Application.Services
 {
     public class UserService : IUserService
     {
-        //private readonly IUserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly IPasswordHasherService _passwordHasher;
 
-        public UserService()
+        public UserService(IUserRepository userRepository, IPasswordHasherService passwordHasher)
         {
-           // _userRepository = userRepository;
+            _userRepository = userRepository;
+            _passwordHasher = passwordHasher;   
         }
 
         public List<User> GetAllUsers()
         {
-            //var users = _userRepository.Get();
-            //return users;
+            var users = _userRepository.Get();
+            return users;
         }
 
         public UserDto AddNewUser(UserCreateRequest userDto)
         {
-            /*var existingUser = _userRepository.GetByEmail(userDto.Email);
+            
+            var existingUser = _userRepository.GetByEmail(userDto.Email);
             if (existingUser != null)
             {
-                throw new BadRequestException("Email already registered. Please try again.");
+                throw new Exception("Email already registered. Please try again.");
             }
-            return UserDto.ToDto(_userRepository.Create(UserCreateRequest.ToEntity(userDto)));*/
+            var hashedPassword = _passwordHasher.HashPassword(userDto.Password);
+            userDto.Password = hashedPassword;
+            var user = UserCreateRequest.ToEntity(userDto);
+            var createdUser = _userRepository.Create(user);
+
+            return UserDto.ToDto(createdUser);
         }
 
         /*public UserDto AddNewAdminUser(UserAdminCreateRequest userDto)
@@ -47,7 +56,7 @@ namespace Application.Services
 
         public UserDto GetUserByEmail(string email)
         {
-            //return UserDto.ToDto(_userRepository.GetByEmail(email));
+            return UserDto.ToDto(_userRepository.GetByEmail(email)!);
         }
 
         /*public UserLoginRequest GetUserToAuthenticate(string email)
@@ -74,27 +83,27 @@ namespace Application.Services
 
         public void UpdateUser(int id, string password)
         {
-            /*User? user = _userRepository.Get(id);
+            User? user = _userRepository.Get(id);
             if (user == null)
             {
-                throw new NotFoundException("User not found.");
+              throw  new Exception("User not found.");
             }
             user.Password = password;
-            _userRepository.Update(user);*/
+            _userRepository.Update(user);
         }
 
         public void DeleteUser(int userId) //BAJA LOGICA
         {
-            /*var user = _userRepository.Get(userId);
+            var user = _userRepository.Get(userId);
             if (user != null)
             {
-                user.IsDeleted = true;
+                user.IsActive = false;
                 _userRepository.Update(user);
             }
             else
             {
-                throw new NotFoundException("User not found.");
-            }*/
+                throw new Exception("User not found.");
+            }
         }
 
     }
