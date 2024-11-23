@@ -11,6 +11,7 @@ namespace Application.Models.UserDtos
 {
     public class UserDto
     {
+            public int Id { get; set; }
         
             public string FirstName { get; set; }
 
@@ -28,6 +29,7 @@ namespace Application.Models.UserDtos
             public static UserDto ToDto(User user)
             {
                 UserDto userDto = new();
+                userDto.Id = user.Id;
                 userDto.FirstName = user.FirstName;
                 userDto.LastName = user.LastName;
                 userDto.Email = user.Email;
