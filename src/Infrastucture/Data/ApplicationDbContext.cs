@@ -14,6 +14,8 @@ namespace Infrastructure.Data
 
         public DbSet<ServicesAndHaircuts> ServicesAndHaircuts { get; set; }
 
+        public DbSet<BarberShop> BarberShop { get; set; }
+
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
