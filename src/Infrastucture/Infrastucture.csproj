@@ -4,6 +4,16 @@
     <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.1" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
