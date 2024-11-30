@@ -16,6 +16,7 @@ namespace Infrastructure.Data
 
         public DbSet<BarberShop> BarberShop { get; set; }
 
+        public DbSet<Day> Day { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

@@ -35,6 +35,9 @@ builder.Services.AddScoped<IServicesAndHaircutsRepository, ServicesAndHaircutsRe
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IBarberShopRepository, BarberShopRepository>();
 builder.Services.AddScoped<IBarberShopService, BarberShopService>();
+builder.Services.AddScoped<IDayRepository,DayRepository>();
+builder.Services.AddScoped<IDayService, DayService>();
+
 
 
 builder.Services.AddScoped<IPasswordHasherService, PasswordHasherService>();

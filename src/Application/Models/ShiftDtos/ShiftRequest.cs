@@ -13,8 +13,6 @@ namespace Application.Models.ShiftDtos
         [Required]
         public int price { get; set; }
 
-        [Required]
-        public bool pending { get; set; }
 
         [Required]
         public bool confirmed { get; set; }
@@ -38,20 +36,23 @@ namespace Application.Models.ShiftDtos
 
         [Required]
 
-        public DateTime day { get; set; }
+        public Day day { get; set; }
 
+        [Required]
+
+        public TimeOnly ShiftTime { get; set; }
         public static Shift ToEntity(ShiftCreateRequest shiftCreateRequest)
         {
             Shift shift = new Shift();
-            shift.price = shiftCreateRequest.price;
-            shift.pending = shiftCreateRequest.pending;
-            shift.confirmed = shiftCreateRequest.confirmed;
-            shift.barber = shiftCreateRequest.barber;
-            shift.services = shiftCreateRequest.services;
-            shift.day = shiftCreateRequest.day;
-            shift.barberShop = shiftCreateRequest.barberShop;
-            shift.client = shiftCreateRequest.client;
-            shift.isPayabled = shiftCreateRequest.isPayabled;
+            shift.Price = shiftCreateRequest.price;
+            shift.Confirmed = false;
+            shift.Barber = shiftCreateRequest.barber;
+            shift.Services = shiftCreateRequest.services;
+            shift.Day = shiftCreateRequest.day;
+            shift.BarberShop = shiftCreateRequest.barberShop;
+            shift.Client = shiftCreateRequest.client;
+            shift.IsPayabled = false;
+            shift.ShiftTime = shiftCreateRequest.ShiftTime;
 
             return shift;
         }
