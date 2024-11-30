@@ -2,7 +2,10 @@
 using Application.Models.BarberShopDtos;
 using Application.Models.ServicesAndHaircutsDtos;
 using Application.Services;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using ServiceStack;
+using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace Web.Controllers
 {
@@ -33,5 +36,29 @@ namespace Web.Controllers
             var newBarberShop = _barberShopService.AddNewBarberShop(barberShop);
             return Ok(newBarberShop);
         }
+
+        [HttpDelete("{barberShopId}")]
+
+        public IActionResult DeleteBarberShop([FromRoute] int barberShopId)
+        {
+
+            _barberShopService.DeleteBarberShop(barberShopId);
+            return Ok(new { message = "BarberShop deleted successfully." });
+        }
+
+        [HttpPut("edit")]
+
+        public IActionResult UpdateName( int id, string premiseName) 
+        {
+
+            _barberShopService.UpdateBarberShop(id, premiseName);
+
+            return Ok();
+
+
+
+        }
+
+
     }
 }
