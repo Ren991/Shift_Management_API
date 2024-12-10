@@ -25,14 +25,14 @@ namespace Application.Models.ShiftDtos
 
         public User Barber { get; set; }
 
-
+        
         public BarberShop BarberShop { get; set; }
 
 
         public List<ServicesAndHaircuts> Services { get; set; }
 
 
-        public Day Day { get; set; }
+        public DateTime Day { get; set; }
 
         public TimeOnly ShiftTime { get; set; }
 

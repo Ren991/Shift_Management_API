@@ -36,7 +36,7 @@ namespace Application.Models.ShiftDtos
 
         [Required]
 
-        public Day day { get; set; }
+        public DateTime day { get; set; }
 
         [Required]
 

@@ -41,7 +41,7 @@ namespace Domain.Entities
 
         [Required]
 
-        public Day Day { get; set; }
+        public DateTime Day { get; set; }
 
         [Required]
         public TimeOnly ShiftTime { get; set; }
