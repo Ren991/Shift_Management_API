@@ -6,7 +6,6 @@ using Infrastucture.Data;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +24,7 @@ builder.Services.AddControllers()
         // Prevent reference cycles
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); // Convert Enums
     });
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

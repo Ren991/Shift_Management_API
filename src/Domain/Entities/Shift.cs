@@ -16,34 +16,34 @@ namespace Domain.Entities
         public int Id { get; set; }
 
         [Required]
-        public int Price { get; set; }
+        public int? Price { get; set; }
 
 
         [Required]
-        public bool Confirmed { get; set; }
+        public bool? Confirmed { get; set; }
 
         [Required]
-        public bool IsPayabled { get; set; }
+        public bool? IsPayabled { get; set; }
 
         [Required]
-        public User Client { get; set; }
+        public User? Client { get; set; }
 
         [Required]
-        public User Barber { get; set; }
-
-        [Required]
-
-        public BarberShop BarberShop { get; set; }
+        public User? Barber { get; set; }
 
         [Required]
 
-        public List<ServicesAndHaircuts> Services { get; set; }
+        public BarberShop? BarberShop { get; set; }
 
         [Required]
 
-        public DateTime Day { get; set; }
+        public List<ServicesAndHaircuts>? Services { get; set; }
 
         [Required]
-        public TimeOnly ShiftTime { get; set; }
+
+        public DateTime? Day { get; set; }
+
+        [Required]
+        public string? ShiftTime { get; set; }
     }
 }
