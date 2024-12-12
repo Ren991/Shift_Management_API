@@ -34,7 +34,7 @@ namespace Infrastucture.Data
             }
 
             shift.Confirmed = true;
-            shift.Client = user;
+            shift.ClientID = 0;
 
             // Obtener los servicios válidos
             var validServices = await _context.ServicesAndHaircuts

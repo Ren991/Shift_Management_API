@@ -33,20 +33,20 @@ namespace Application.Services
         {
             var shift = ShiftCreateRequest.ToEntity(shiftDto);
 
-            var barber = _userRepository.Get(shiftDto.Barber.Id);
+            var barber = _userRepository.Get(shiftDto.BarberID);
             if (barber == null)
             {
                 throw new Exception("Barber not found");
             }
 
-            var barberShop = _barberShopRepository.Get(shiftDto.BarberShop.Id);
+            var barberShop = _barberShopRepository.Get(shiftDto.BarberShopID);
             if (barberShop == null)
             {
                 throw new Exception("Barber not found");
             }
 
             shift.BarberShop = barberShop;
-            shift.Barber = barber;
+            shift.BarberID = barber.Id;
             
 
             var createdShift = _shiftRepository.Create(shift);

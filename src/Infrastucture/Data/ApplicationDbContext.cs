@@ -31,10 +31,30 @@ namespace Infrastructure.Data
                       .ValueGeneratedOnAdd();
             });
 
+            modelBuilder.Entity<Shift>()
+                .HasOne(s => s.User)
+                .WithMany() // No inverse navigation property needed as Client is also a User
+                .HasForeignKey(s => s.ClientID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Shift>()
+                .HasOne(s => s.User)
+                .WithMany() // No inverse navigation property needed as Client is also a User
+                .HasForeignKey(s => s.BarberID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Shift>()
+                .HasOne(s => s.BarberShop)
+                .WithMany(b => b.Shifts)
+                .HasForeignKey(s => s.BarberShopID);
 
             modelBuilder.Entity<Shift>()
                 .HasOne(s => s.BarberShop);// One Shift belongs to one BarberShop
+
+            modelBuilder.Entity<Shift>()
+                .HasMany(s => s.Services);
                 
+
 
         }
 
