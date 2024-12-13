@@ -41,6 +41,7 @@ namespace Infrastucture.Data
             return entity;
         }
 
+
         public void Delete(T entity)
         {
             _dbContext.Set<T>().Remove(entity);

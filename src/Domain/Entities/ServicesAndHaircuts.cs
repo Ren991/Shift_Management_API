@@ -25,5 +25,11 @@ namespace Domain.Entities
         
         [Required]      
         public bool IsActive { get; set; }
+
+        [Required]
+        public int ShiftId { get; set; }
+
+        [Required]
+        public Shift Shift { get; set; }
     }
 }

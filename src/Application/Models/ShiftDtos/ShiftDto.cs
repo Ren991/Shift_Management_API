@@ -15,7 +15,7 @@ namespace Application.Models.ShiftDtos
         
         public User? User { get; set; }
 
-        public int? Price { get; set; }
+        public double? Price { get; set; }
 
 
         public bool? Confirmed { get; set; }

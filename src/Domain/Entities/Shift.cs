@@ -19,7 +19,7 @@ namespace Domain.Entities
         public User User { get; set; }
 
         [Required]
-        public int? Price { get; set; }
+        public double? Price { get; set; }
 
 
         [Required]

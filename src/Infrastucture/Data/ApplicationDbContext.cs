@@ -52,8 +52,11 @@ namespace Infrastructure.Data
                 .HasOne(s => s.BarberShop);// One Shift belongs to one BarberShop
 
             modelBuilder.Entity<Shift>()
-                .HasMany(s => s.Services);
-                
+
+                .HasMany(s => s.Services)
+                .WithOne(s => s.Shift)
+                .HasForeignKey(s => s.ShiftId);
+
 
 
         }

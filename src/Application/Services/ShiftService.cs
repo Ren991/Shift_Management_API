@@ -54,9 +54,9 @@ namespace Application.Services
             return ShiftDto.ToDto(createdShift);
         }
 
-        public async void ConfirmShift(int shiftId, int clientId, List<int> serviceIds)
+        public async void ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift)
         {
-            await _shiftRepository.ConfirmShiftAsync(shiftId, clientId, serviceIds);
+            await _shiftRepository.ConfirmShiftAsync(shiftId, clientId, serviceIds, payShift);
         }
     }
 }

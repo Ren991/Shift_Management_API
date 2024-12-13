@@ -9,7 +9,7 @@ namespace Domain.Interfaces
 {
     public interface IShiftRepository : IRepositoryBase<Shift>
     {
-        Task ConfirmShiftAsync(int shiftId, int clientId, List<int> servicesId);
+        Task ConfirmShiftAsync(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
 
     }
 }
