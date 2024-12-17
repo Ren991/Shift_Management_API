@@ -28,11 +28,11 @@ namespace Web.Controllers
             return Ok(newShift);
         }
 
-        /*[HttpPut("confirm")]
-        public async Task<IActionResult> ConfirmShift([FromBody] int shiftId, int clientId, List<int> serviceIds)
+        [HttpPut("confirm")]
+        public async Task<IActionResult> ConfirmShift(int shiftId, int clientId, [FromBody] IEnumerable<int> serviceIds, bool payShift)
         {
-            _shiftService.ConfirmShift(shiftId, clientId, serviceIds);
+            _shiftService.ConfirmShift(shiftId, clientId, serviceIds, payShift);
             return Ok();
-        }*/
+        }
     }
 }

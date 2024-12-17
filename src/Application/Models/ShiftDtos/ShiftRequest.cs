@@ -13,39 +13,30 @@ namespace Application.Models.ShiftDtos
     public class ShiftCreateRequest
     {
         [Required]
-        public int Price { get; set; }
-
-        
+        public double Price { get; set; }
 
         [Required]
-        public User Barber { get; set; }
+        public int BarberID { get; set; }
 
         [Required]
-
-        public BarberShop BarberShop { get; set; }
-
-        [Required]
-
-        public List<ServicesAndHaircuts> Services { get; set; }
+        public int BarberShopID { get; set; }
 
         [Required]
-
         public DateTime Day { get; set; }
 
         [Required]
         public string ShiftTime { get; set; }
-        
+
 
         public static Shift ToEntity(ShiftCreateRequest shiftCreateRequest)
         {
             Shift shift = new Shift();
             shift.Price = shiftCreateRequest.Price;
             shift.Confirmed = false;
-            shift.Barber = shiftCreateRequest.Barber;
-            shift.Services = shiftCreateRequest.Services;
+            shift.BarberID = shiftCreateRequest.BarberID;
             shift.Day = shiftCreateRequest.Day;
-            shift.BarberShop = shiftCreateRequest.BarberShop;
-            shift.Client = null;
+            shift.BarberShopID = shiftCreateRequest.BarberShopID;
+            shift.ClientID = 2;
             shift.IsPayabled = false;
             shift.ShiftTime = shiftCreateRequest.ShiftTime;
 

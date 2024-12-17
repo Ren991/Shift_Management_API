@@ -16,7 +16,10 @@ namespace Domain.Entities
         public int Id { get; set; }
 
         [Required]
-        public int? Price { get; set; }
+        public User User { get; set; }
+
+        [Required]
+        public double? Price { get; set; }
 
 
         [Required]
@@ -25,11 +28,13 @@ namespace Domain.Entities
         [Required]
         public bool? IsPayabled { get; set; }
 
-        [Required]
-        public User? Client { get; set; }
+
 
         [Required]
-        public User? Barber { get; set; }
+        public int? ClientID { get; set; } = null;
+
+        [Required]
+        public int? BarberID { get; set; }
 
         [Required]
 
@@ -37,7 +42,11 @@ namespace Domain.Entities
 
         [Required]
 
-        public List<ServicesAndHaircuts>? Services { get; set; }
+        public int? BarberShopID { get; set; }
+
+        [Required]
+
+        public ICollection<ServicesAndHaircuts>? Services { get; set; } = new List<ServicesAndHaircuts>();
 
         [Required]
 

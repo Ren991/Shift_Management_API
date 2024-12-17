@@ -25,6 +25,9 @@ namespace Domain.Entities
 
         [Required]
         public bool IsActive { get; set; }
-        
+
+        [Required]
+        public  ICollection<Shift> Shifts { get; set; }
+
     }
 }

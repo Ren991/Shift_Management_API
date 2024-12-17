@@ -33,20 +33,20 @@ namespace Application.Services
         {
             var shift = ShiftCreateRequest.ToEntity(shiftDto);
 
-            var barber = _userRepository.Get(shiftDto.Barber.Id);
+            var barber = _userRepository.Get(shiftDto.BarberID);
             if (barber == null)
             {
                 throw new Exception("Barber not found");
             }
 
-            var barberShop = _barberShopRepository.Get(shiftDto.BarberShop.Id);
+            var barberShop = _barberShopRepository.Get(shiftDto.BarberShopID);
             if (barberShop == null)
             {
                 throw new Exception("Barber not found");
             }
 
             shift.BarberShop = barberShop;
-            shift.Barber = barber;
+            shift.BarberID = barber.Id;
             
 
             var createdShift = _shiftRepository.Create(shift);
@@ -54,9 +54,9 @@ namespace Application.Services
             return ShiftDto.ToDto(createdShift);
         }
 
-        public async void ConfirmShift(int shiftId, int clientId, List<int> serviceIds)
+        public async void ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift)
         {
-            await _shiftRepository.ConfirmShiftAsync(shiftId, clientId, serviceIds);
+            await _shiftRepository.ConfirmShiftAsync(shiftId, clientId, serviceIds, payShift);
         }
     }
 }
