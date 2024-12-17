@@ -6,7 +6,6 @@ using Infrastucture.Data;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +25,7 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); // Convert Enums
     });
 
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -35,9 +35,8 @@ builder.Services.AddScoped<IServicesAndHaircutsRepository, ServicesAndHaircutsRe
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IBarberShopRepository, BarberShopRepository>();
 builder.Services.AddScoped<IBarberShopService, BarberShopService>();
-builder.Services.AddScoped<IDayRepository,DayRepository>();
-builder.Services.AddScoped<IDayService, DayService>();
-
+builder.Services.AddScoped<IShiftRepository, ShiftRepository>();
+builder.Services.AddScoped<IShiftService,  ShiftService>();
 
 
 builder.Services.AddScoped<IPasswordHasherService, PasswordHasherService>();

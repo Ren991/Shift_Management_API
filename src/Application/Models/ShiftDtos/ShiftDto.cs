@@ -12,29 +12,29 @@ namespace Application.Models.ShiftDtos
 
     {
 
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
-        public int Price { get; set; }
-
-
-        public bool Confirmed { get; set; }
-
-        public bool IsPayabled { get; set; }
-
-        public User Client { get; set; }
-
-        public User Barber { get; set; }
+        public int? Price { get; set; }
 
 
-        public BarberShop BarberShop { get; set; }
+        public bool? Confirmed { get; set; }
+
+        public bool  IsPayabled { get; set; }
+
+        public User? Client { get; set; }
+
+        public User? Barber { get; set; }
+
+        
+        public BarberShop? BarberShop { get; set; }
 
 
         public List<ServicesAndHaircuts> Services { get; set; }
 
 
-        public Day Day { get; set; }
+        public DateTime? Day { get; set; }
 
-        public TimeOnly ShiftTime { get; set; }
+        public string? ShiftTime { get; set; }
 
         public static ShiftDto ToDto(Shift shift) 
         {

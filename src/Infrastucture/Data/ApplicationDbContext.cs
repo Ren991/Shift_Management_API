@@ -16,15 +16,25 @@ namespace Infrastructure.Data
 
         public DbSet<BarberShop> BarberShop { get; set; }
 
-        public DbSet<Day> Day { get; set; }
+        public DbSet<Shift> Shift { get; set; } 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {         
+        {
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(p => p.Id);
+                entity.Property(p => p.Id)
+                      .ValueGeneratedOnAdd();
+            });
 
+
+            modelBuilder.Entity<Shift>()
+                .HasOne(s => s.BarberShop);// One Shift belongs to one BarberShop
+                
 
         }
 

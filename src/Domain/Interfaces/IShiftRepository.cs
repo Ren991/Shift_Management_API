@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface IDayRepository : IRepositoryBase<Day>
+    public interface IShiftRepository : IRepositoryBase<Shift>
     {
-   
-
+        Task ConfirmShiftAsync(int shiftId, int clientId, List<int> servicesId);
 
     }
 }
