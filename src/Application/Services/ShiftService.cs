@@ -16,16 +16,19 @@ namespace Application.Services
         private readonly IShiftRepository _shiftRepository;
         private readonly IUserRepository _userRepository;
         private readonly IBarberShopRepository _barberShopRepository;
-        public ShiftService(IShiftRepository shiftRepository, IUserRepository userRepository, IBarberShopRepository barberShopRepository)
+        private readonly IServicesAndHaircutsRepository _servicesRepository;
+        public ShiftService(IShiftRepository shiftRepository, IUserRepository userRepository, IBarberShopRepository barberShopRepository, IServicesAndHaircutsRepository servicesRepository)
         {
             _shiftRepository = shiftRepository;
             _userRepository = userRepository;
             _barberShopRepository = barberShopRepository;
+            _servicesRepository = servicesRepository;
         }
 
-        public List<Shift> GetAllShift()
+        public async Task<List<Shift>> GetAllShift()
         {
             var shifts = _shiftRepository.Get();
+            //var shiftDtos = shifts.Select(shift => ShiftDto.ToDto(shift)).ToList();
             return shifts;
         }
 
@@ -54,9 +57,36 @@ namespace Application.Services
             return ShiftDto.ToDto(createdShift);
         }
 
-        public async void ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift)
+        public async Task<Shift> ConfirmShiftAsync(int shiftId, int clientId, IEnumerable<int> serviceIds, bool payShift)
         {
-            await _shiftRepository.ConfirmShiftAsync(shiftId, clientId, serviceIds, payShift);
+            var shift =  _shiftRepository.Get(shiftId);
+            if (shift == null)
+            {
+                throw new Exception("Turno no encontrado");
+            }
+
+            var validServiceIds = serviceIds?.ToList() ?? new List<int>(); // Handle null or empty serviceIds
+            var validServices = new List<ServicesAndHaircuts>();
+
+            foreach (var serviceId in validServiceIds)
+            {
+                var service = _servicesRepository.Get(serviceId); // Assuming GetByIdAsync is async
+                if (service != null)
+                {
+                    validServices.Add(service);
+                }
+            }
+
+            // Validar servicios y actualizar el turno
+
+            shift.Confirmed = true;
+            shift.ClientID = clientId;
+            shift.IsPayabled = payShift;            
+            
+
+            return await _shiftRepository.UpdateAsync(shift);
         }
+
+        
     }
 }

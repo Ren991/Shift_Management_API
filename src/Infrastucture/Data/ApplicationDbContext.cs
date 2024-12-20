@@ -57,6 +57,7 @@ namespace Infrastructure.Data
                 .WithOne(s => s.Shift)
                 .HasForeignKey(s => s.ShiftId);
 
+            
 
 
         }

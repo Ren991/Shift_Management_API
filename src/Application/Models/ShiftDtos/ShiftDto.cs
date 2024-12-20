@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.Models.ServicesAndHaircutsDtos;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -30,7 +31,7 @@ namespace Application.Models.ShiftDtos
 
         public int? BarberShopID { get; set; }
 
-        public ICollection<ServicesAndHaircuts>? Services { get; set; } = new List<ServicesAndHaircuts>();
+        public ICollection<ServicesAndHaircutsDto> Services { get; set; } = new List<ServicesAndHaircutsDto>();
 
         public DateTime? Day { get; set; }
 
@@ -42,7 +43,7 @@ namespace Application.Models.ShiftDtos
             shiftDto.Id = shift.Id;
             shiftDto.Price = shift?.Price;
             shiftDto.Confirmed = shift?.Confirmed;
-            shiftDto.Services = shift?.Services;
+            shiftDto.Services = ServicesAndHaircutsDto.ToCollectionDto(shift.Services ?? new List<ServicesAndHaircuts>());
             shiftDto.Day = shift?.Day;
             shiftDto.ShiftTime = shift?.ShiftTime;
             shiftDto.IsPayabled = shift?.IsPayabled;

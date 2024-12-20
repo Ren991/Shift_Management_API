@@ -9,12 +9,6 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string connectionString = builder.Configuration["ConnectionStrings:BarberShopDBConnectionString"]!;
-
-// Configure the SQLite connection
-var connection = new SqliteConnection("Data Source= barbershop.db");
-connection.Open();
-builder.Services.AddDbContext<ApplicationDbContext>(dbContextOptions => dbContextOptions.UseSqlite(connection));
 // Add services to the container.
 
 builder.Services.AddControllers()
@@ -25,6 +19,13 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); // Convert Enums
     });
 
+
+string connectionString = builder.Configuration["ConnectionStrings:BarberShopDBConnectionString"]!;
+
+// Configure the SQLite connection
+var connection = new SqliteConnection("Data Source= barbershop.db");
+connection.Open();
+builder.Services.AddDbContext<ApplicationDbContext>(dbContextOptions => dbContextOptions.UseSqlite(connection));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

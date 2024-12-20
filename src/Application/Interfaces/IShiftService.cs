@@ -11,10 +11,10 @@ namespace Application.Interfaces
 {
     public interface IShiftService
     {
-        List<Shift> GetAllShift();
+        Task<List<Shift>> GetAllShift();
 
         ShiftDto AddNewShift(ShiftCreateRequest shiftDto);
 
-        void ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
+        Task<Shift> ConfirmShiftAsync(int shiftId, int clientId, IEnumerable<int> serviceIds, bool payShift);
     }
 }
