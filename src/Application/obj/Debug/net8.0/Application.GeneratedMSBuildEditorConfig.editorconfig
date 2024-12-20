@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Application
-build_property.ProjectDir = C:\Users\Renzo\Documents\shift_management\shift_management_API\Shift_Management_API\src\Application\
+build_property.ProjectDir = C:\Users\PC\OneDrive - UCA\Proyectos Individuales 2024\Aplicacion Barberia\Shift_Management_API\Shift_Management_API\src\Application\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
