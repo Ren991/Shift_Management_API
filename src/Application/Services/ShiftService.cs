@@ -106,5 +106,21 @@ namespace Application.Services
             return await _shiftRepository.GetByBarberShopAndDay(barberShopId, day);
         }
 
+        public async Task CancelShift(int shiftId)
+        {
+            var shift =  await _shiftRepository.GetShiftWithServicesAsync(shiftId);
+            if (shift == null)
+            {
+                throw new Exception("Turno no encontrado");
+            }
+
+            shift.Confirmed = false;
+            shift.ClientID = null;
+            shift.IsPayabled = false;
+            shift.Services = [];
+
+            // Guardar los cambios
+            await _shiftRepository.SaveChangesAsync();
+        }
     }
 }

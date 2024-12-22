@@ -153,6 +153,22 @@
   },
   {
     "ContainingType": "Web.Controllers.ShiftController",
+    "Method": "CancelShift",
+    "RelativePath": "api/Shift/cancel-shift",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shiftId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ShiftController",
     "Method": "ConfirmShift",
     "RelativePath": "api/Shift/confirm",
     "HttpMethod": "PUT",

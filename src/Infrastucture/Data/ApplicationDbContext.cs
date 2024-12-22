@@ -38,6 +38,11 @@ namespace Infrastructure.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Shift>()
+                .Property(s => s.ClientID)
+                .IsRequired(false); // Permitir valores nulos
+
+
+            modelBuilder.Entity<Shift>()
                 .HasOne(s => s.User)
                 .WithMany() // No inverse navigation property needed as Client is also a User
                 .HasForeignKey(s => s.BarberID)

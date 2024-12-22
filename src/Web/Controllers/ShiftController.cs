@@ -43,5 +43,15 @@ namespace Web.Controllers
 
             return Ok(filteredShift);
         }
+
+        [HttpPut("cancel-shift")]
+        public async Task<IActionResult> CancelShift([FromQuery] int shiftId)
+        { 
+           await  _shiftService.CancelShift(shiftId);
+
+            return Ok();
+           
+        }
+
     }
 }
