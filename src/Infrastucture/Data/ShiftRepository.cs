@@ -61,7 +61,7 @@ namespace Infrastucture.Data
             var totalPrice = validServices.Where(s => s != null).Sum(s => s.Price);
             shift.Price = totalPrice;
 
-
+            _context.Shift.Update(shift);
             await _context.SaveChangesAsync();
         }
 

@@ -64,9 +64,9 @@ namespace Application.Services
             }
 
             //Validar que el turno no  este confirmado
-            if (shift.Confirmed == true) {
-                throw new Exception("Shift is confirmed already");
-            }
+            //if (shift.Confirmed == true) {
+            //    throw new Exception("Shift is confirmed already");
+            //}
 
             // Validar que el cliente exista
             var user =  _userRepository.Get(clientId);
