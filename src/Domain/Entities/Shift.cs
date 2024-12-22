@@ -13,36 +13,46 @@ namespace Domain.Entities
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public int price { get; set; }
+        public User User { get; set; }
 
         [Required]
-        public bool pending { get; set; }
+        public double? Price { get; set; }
+
 
         [Required]
-        public bool confirmed { get; set; }
+        public bool? Confirmed { get; set; }
 
         [Required]
-        public bool isPayabled { get; set; }
+        public bool? IsPayabled { get; set; }
+
+
 
         [Required]
-        public User client { get; set; }
+        public int? ClientID { get; set; } = null;
 
         [Required]
-        public User barber { get; set; }
-
-        [Required]
-
-        public BarberShop barberShop { get; set; }
-
-        [Required]
-
-        public List<ServicesAndHaircuts> services { get; set; }
+        public int? BarberID { get; set; }
 
         [Required]
 
-        public DateTime day { get; set; }
+        public BarberShop? BarberShop { get; set; }
+
+        [Required]
+
+        public int? BarberShopID { get; set; }
+
+        [Required]
+
+        public ICollection<ServicesAndHaircuts> Services { get; set; }
+
+        [Required]
+
+        public DateTime? Day { get; set; }
+
+        [Required]
+        public string? ShiftTime { get; set; }
     }
 }

@@ -11,43 +11,48 @@ namespace Application.Models.ShiftDtos
     public class ShiftDto
 
     {
+        public int Id { get; set; }
+        
+        public User? User { get; set; }
 
-        public int id { get; set; }
-
-        public int price { get; set; }
-
-        public bool pending { get; set; }
-
-        public bool confirmed { get; set; }
-
-        public bool isPayabled { get; set; }
-
-        public User client { get; set; }
-
-        public User barber { get; set; }
+        public double? Price { get; set; }
 
 
-        public BarberShop barberShop { get; set; }
+        public bool? Confirmed { get; set; }
 
+        public bool? IsPayabled { get; set; }
 
-        public List<ServicesAndHaircuts> services { get; set; }
+        public int? ClientID { get; set; }
 
+        public int? BarberID { get; set; }
 
-        public DateTime day { get; set; }
+        public BarberShop? BarberShop { get; set; }
+
+        public int? BarberShopID { get; set; }
+
+        public ICollection<ServicesAndHaircuts>? Services { get; set; } 
+
+        public DateTime? Day { get; set; }
+
+        public string? ShiftTime { get; set; }
 
         public static ShiftDto ToDto(Shift shift) 
         {
-            ShiftDto shifDto = new();
-            shifDto.id = shift.id;
-            shifDto.price = shift.price;
-            shifDto.pending = shift.pending;
-            shifDto.confirmed = shift.confirmed;
-            shifDto.services = shift.services;
-            shifDto.day = shift.day;
-            shifDto.client = shift.client;
-            shifDto.barberShop = shift.barberShop;
+            ShiftDto shiftDto = new();
+            shiftDto.Id = shift.Id;
+            shiftDto.Price = shift?.Price;
+            shiftDto.Confirmed = shift?.Confirmed;
+            shiftDto.Services = shift?.Services;
+            shiftDto.Day = shift?.Day;
+            shiftDto.ShiftTime = shift?.ShiftTime;
+            shiftDto.IsPayabled = shift?.IsPayabled;
+            shiftDto.ClientID = shift?.ClientID;
+            shiftDto.BarberID = shift?.BarberID;
+            shiftDto.ShiftTime = shift?.ShiftTime;
+            shiftDto.BarberShopID = shift?.BarberShopID;
+            shiftDto.BarberShop = shift?.BarberShop;
 
-            return shifDto;
+            return shiftDto;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace Domain.Entities
 {
@@ -25,5 +26,8 @@ namespace Domain.Entities
         
         [Required]      
         public bool IsActive { get; set; }
+
+
+       
     }
 }
