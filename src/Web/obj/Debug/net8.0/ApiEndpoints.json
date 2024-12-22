@@ -183,6 +183,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.ShiftController",
+    "Method": "FindByDayAndBarberShop",
+    "RelativePath": "api/Shift/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barberShopId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "day",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.UserController",
     "Method": "GetAll",
     "RelativePath": "api/User",

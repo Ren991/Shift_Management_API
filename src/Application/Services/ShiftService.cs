@@ -100,5 +100,11 @@ namespace Application.Services
             // Guardar los cambios
             await _shiftRepository.SaveChangesAsync();
         }
+
+        public async Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day)
+        {
+            return await _shiftRepository.GetByBarberShopAndDay(barberShopId, day);
+        }
+
     }
 }

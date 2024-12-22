@@ -15,5 +15,7 @@ namespace Domain.Interfaces
         Task<List<ServicesAndHaircuts>> GetServicesByIdsAsync(IEnumerable<int> serviceIds);
 
         Task SaveChangesAsync();
+
+        Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day);
     }
 }

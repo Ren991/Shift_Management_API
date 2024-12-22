@@ -34,5 +34,14 @@ namespace Web.Controllers
             await _shiftService.ConfirmShift(shiftId, clientId, serviceIds, payShift);
             return Ok();
         }
+
+
+        [HttpGet("filter")]
+        public IActionResult FindByDayAndBarberShop([FromQuery] int barberShopId, [FromQuery] DateTime day) 
+        {
+            var filteredShift = _shiftService.GetByBarberShopAndDay(barberShopId, day);
+
+            return Ok(filteredShift);
+        }
     }
 }
