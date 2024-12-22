@@ -15,6 +15,6 @@ namespace Application.Interfaces
 
         ShiftDto AddNewShift(ShiftCreateRequest shiftDto);
 
-        void ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
+        Task ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
     }
 }

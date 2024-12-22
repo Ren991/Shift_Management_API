@@ -27,11 +27,11 @@ namespace Domain.Entities
         [Required]      
         public bool IsActive { get; set; }
 
-        [Required]
-        public int ShiftId { get; set; }
+        //[Required]
+        public int? ShiftId { get; set; }
 
         //[Required]
-        [JsonIgnore]
-        public Shift Shift { get; set; }
+        //[JsonIgnore]
+        public Shift? Shift { get; set; }
     }
 }

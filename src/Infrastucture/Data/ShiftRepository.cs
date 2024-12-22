@@ -46,30 +46,8 @@ namespace Infrastucture.Data
                 shift.IsPayabled = true;
             }
 
-            // Get valid services using GetById from repository
-            //var validServiceIds = serviceIds?.ToList() ?? new List<int>(); // Handle null or empty serviceIds
-            //var validServices = new List<ServicesAndHaircuts>();
 
-            // Validar y asociar servicios
-            //var validServiceIds = serviceIds?.ToList() ?? new List<int>();
-            //var validServices = await _context.ServicesAndHaircuts
-            //.Where(s => validServiceIds.Contains(s.Id))
-            //.ToListAsync();
 
-            //if (validServices.Count != validServiceIds.Count)
-            //{
-            //    throw new Exception("Uno o más servicios no son válidos");
-            //}
-
-            //foreach (var serviceId in validServiceIds)
-            //{
-            //    var service =  _serviceRepository.GetById(serviceId); // Assuming GetByIdAsync is async
-            //    if (service != null)
-            //    {
-            //        //validServices.Add(service);
-            //        service.ShiftId = shiftId; // Asociar servicio al turno
-            //    }
-            //}
             var validServices = await _context.ServicesAndHaircuts
                                        .Where(s => serviceIds.Contains(s.Id))
                                        .ToListAsync();
@@ -83,8 +61,6 @@ namespace Infrastucture.Data
             var totalPrice = validServices.Where(s => s != null).Sum(s => s.Price);
             shift.Price = totalPrice;
 
-            // **Set the retrieved services to the shift**
-            //shift.Services = validServices;
 
             await _context.SaveChangesAsync();
         }
@@ -94,6 +70,25 @@ namespace Infrastucture.Data
             return _context.Shift
                            .Include(s => s.Services) // Incluir la relación con servicios
                            .ToList();
+        }
+
+        public async Task<Shift> GetShiftWithServicesAsync(int shiftId)
+        {
+            return await _context.Shift
+                                 .Include(s => s.Services)
+                                 .FirstOrDefaultAsync(s => s.Id == shiftId);
+        }
+
+        public async Task<List<ServicesAndHaircuts>> GetServicesByIdsAsync(IEnumerable<int> serviceIds)
+        {
+            return await _context.ServicesAndHaircuts
+                                 .Where(s => serviceIds.Contains(s.Id))
+                                 .ToListAsync();
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
         }
 
     }

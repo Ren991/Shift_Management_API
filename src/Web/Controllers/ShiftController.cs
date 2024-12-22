@@ -31,7 +31,7 @@ namespace Web.Controllers
         [HttpPut("confirm")]
         public async Task<IActionResult> ConfirmShift(int shiftId, int clientId, [FromBody] IEnumerable<int> serviceIds, bool payShift)
         {
-            _shiftService.ConfirmShift(shiftId, clientId, serviceIds, payShift);
+            await _shiftService.ConfirmShift(shiftId, clientId, serviceIds, payShift);
             return Ok();
         }
     }

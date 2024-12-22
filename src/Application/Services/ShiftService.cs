@@ -54,9 +54,51 @@ namespace Application.Services
             return ShiftDto.ToDto(createdShift);
         }
 
-        public async void ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift)
+        public async Task ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift)
         {
-            await _shiftRepository.ConfirmShiftAsync(shiftId, clientId, serviceIds, payShift);
+            // Obtener el turno y validar que exista
+            var shift = await _shiftRepository.GetShiftWithServicesAsync(shiftId);
+            if (shift == null)
+            {
+                throw new Exception("Turno no encontrado");
+            }
+
+            //Validar que el turno no  este confirmado
+            if (shift.Confirmed == true) {
+                throw new Exception("Shift is confirmed already");
+            }
+
+            // Validar que el cliente exista
+            var user =  _userRepository.Get(clientId);
+            if (user == null)
+            {
+                throw new Exception("Usuario no encontrado");
+            }
+
+            // Marcar el turno como confirmado y asociar el cliente
+            shift.Confirmed = true;
+            shift.ClientID = clientId;
+
+            if (payShift)
+            {
+                shift.IsPayabled = true;
+            }
+
+            // Obtener y validar los servicios
+            var validServices = await _shiftRepository.GetServicesByIdsAsync(serviceIds ?? Enumerable.Empty<int>());
+            if (validServices.Count != (serviceIds?.Count() ?? 0))
+            {
+                throw new Exception("Uno o más servicios no son válidos");
+            }
+
+            // Asociar servicios al turno
+            shift.Services = validServices;
+
+            // Calcular el precio total del turno
+            shift.Price = validServices.Sum(s => s.Price);
+
+            // Guardar los cambios
+            await _shiftRepository.SaveChangesAsync();
         }
     }
 }

@@ -54,13 +54,15 @@ namespace Infrastructure.Data
             modelBuilder.Entity<Shift>()
 
                 .HasMany(s => s.Services)
-                .WithOne(s => s.Shift)
-                .HasForeignKey(s => s.ShiftId);
+                .WithOne(s => s.Shift);
+            //.HasForeignKey(s => s.ShiftId);
 
             modelBuilder.Entity<ServicesAndHaircuts>()
-               .HasOne(s => s.Shift)
-               .WithMany(shift => shift.Services)
-               .HasForeignKey(s => s.ShiftId);
+                .HasOne(s => s.Shift)
+                .WithMany(shift => shift.Services)
+                .HasForeignKey(s => s.ShiftId)
+                .IsRequired(false); // Relación opcional
+
 
         }
 
