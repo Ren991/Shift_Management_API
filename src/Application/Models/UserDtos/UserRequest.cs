@@ -32,7 +32,7 @@ namespace Application.Models.UserDtos
             user.LastName = userDto.LastName;
             user.Email = userDto.Email;
             user.Password = userDto.Password;
-            user.UserType = UserType.Client;
+            user.Role = Role.Admin;
             user.IsActive = true;
            
 

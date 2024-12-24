@@ -2,7 +2,10 @@
 using Application.Models.ServicesAndHaircutsDtos;
 using Application.Models.UserDtos;
 using Application.Services;
+using Domain.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Web.Controllers
 {
@@ -16,11 +19,11 @@ namespace Web.Controllers
             _servicesAndHaircutService = servicesAndHaircutService;
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
         {
-
+            var userTypeString = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
             var services = _servicesAndHaircutService.GetAllServices();
 
             return Ok(services);

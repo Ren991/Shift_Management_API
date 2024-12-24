@@ -10,6 +10,8 @@ namespace Domain.Interfaces
     {
         public List<T> Get();
 
+        //public IEnumerable<T> GetAllActive();
+
         public T? Get<Tid>(Tid id);
 
         public T Create(T entity);

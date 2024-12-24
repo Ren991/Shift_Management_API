@@ -20,9 +20,9 @@ namespace Application.Services
             _servicesAndHaircutsRepository = servicesAndHaircutsRepository;
         }
 
-        public List<ServicesAndHaircuts> GetAllServices()
+        public IEnumerable<ServicesAndHaircuts> GetAllServices()
         {
-            var services = _servicesAndHaircutsRepository.Get();
+            var services = _servicesAndHaircutsRepository.GetAllActive();
             return services;
         }
 

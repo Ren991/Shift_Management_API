@@ -21,7 +21,7 @@ namespace Infrastucture.Data
             _context = context;
         }
 
-        public async Task<List<Shift>> GetAllShifts()
+        public async Task ConfirmShiftAsync(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift)
         {
             //var shift = await _context.Shift.FindAsync(shiftId);
             var shift = await _context.Shift
@@ -63,7 +63,6 @@ namespace Infrastucture.Data
 
             _context.Shift.Update(shift);
             await _context.SaveChangesAsync();
-            return shift;
         }
 
         public List<Shift> Get()

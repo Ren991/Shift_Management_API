@@ -9,6 +9,8 @@ namespace Domain.Interfaces
 {
     public interface IServicesAndHaircutsRepository : IRepositoryBase<ServicesAndHaircuts>
     {
+        public List<ServicesAndHaircuts> GetAllActive();
+
         public ServicesAndHaircuts? GetByName(string name);
 
         public ServicesAndHaircuts? GetById(int id);

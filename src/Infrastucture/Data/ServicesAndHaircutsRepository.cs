@@ -18,6 +18,13 @@ namespace Infrastucture.Data
             _context = context;
         }
 
+        public List<ServicesAndHaircuts> GetAllActive()
+        {
+            return _context.ServicesAndHaircuts
+                .Where(s => s.IsActive)
+                .ToList();
+        }
+
         public ServicesAndHaircuts? GetByName(string name)
         {
             return _context.ServicesAndHaircuts.FirstOrDefault(u => u.Name == name);

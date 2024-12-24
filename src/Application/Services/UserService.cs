@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Application.Models.AuthDtos;
 using Application.Models.UserDtos;
 using Domain.Entities;
 using Domain.Interfaces;
@@ -35,8 +36,8 @@ namespace Application.Services
             {
                 throw new Exception("Email already registered. Please try again.");
             }
-            var hashedPassword = _passwordHasher.HashPassword(userDto.Password);
-            userDto.Password = hashedPassword;
+            /*var hashedPassword = _passwordHasher.HashPassword(userDto.Password);
+            userDto.Password = hashedPassword;*/
             var user = UserCreateRequest.ToEntity(userDto);
             var createdUser = _userRepository.Create(user);
 
@@ -59,26 +60,23 @@ namespace Application.Services
             return UserDto.ToDto(_userRepository.GetByEmail(email)!);
         }
 
-        /*public UserLoginRequest GetUserToAuthenticate(string email)
+        public UserLoginRequest GetUserToAuthenticate(string email)
         {
 
             UserDto entity = GetUserByEmail(email);
 
             if (entity == null)
             {
-                throw new NotFoundException("User not found.");
+                throw new Exception("User not found.");
             }
 
             UserLoginRequest entityToAuthenticate = new();
             entityToAuthenticate.Email = entity.Email;
             entityToAuthenticate.Password = entity.Password;
-            entityToAuthenticate.Role = entity.Role;
 
             return entityToAuthenticate;
 
-
-
-        }*/
+        }
 
 
         public void UpdateUser(int id, string password)

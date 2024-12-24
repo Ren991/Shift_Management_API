@@ -142,7 +142,7 @@ namespace Infrastucture.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UserType")
+                    b.Property<int>("Role")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

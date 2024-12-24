@@ -29,7 +29,7 @@ namespace Domain.Entities
         public string Email { get; set; }
 
         [Required]
-        public UserType UserType { get; set; }
+        public Role Role { get; set; }
 
         [Required]
         public bool IsActive { get; set; }

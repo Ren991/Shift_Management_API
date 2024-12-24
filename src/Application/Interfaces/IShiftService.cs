@@ -11,7 +11,7 @@ namespace Application.Interfaces
 {
     public interface IShiftService
     {
-        Task<List<Shift>> GetAllShift();
+        List<Shift> GetAllShift();
 
         ShiftDto AddNewShift(ShiftCreateRequest shiftDto);
 
