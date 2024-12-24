@@ -63,12 +63,7 @@ namespace Infrastucture.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("ShiftId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ShiftId");
 
                     b.ToTable("ServicesAndHaircuts");
                 });
@@ -88,7 +83,6 @@ namespace Infrastucture.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("ClientID")
-                        .IsRequired()
                         .HasColumnType("INTEGER");
 
                     b.Property<bool?>("Confirmed")
@@ -153,15 +147,19 @@ namespace Infrastucture.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Domain.Entities.ServicesAndHaircuts", b =>
+            modelBuilder.Entity("ShiftService", b =>
                 {
-                    b.HasOne("Domain.Entities.Shift", "Shift")
-                        .WithMany("Services")
-                        .HasForeignKey("ShiftId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("ShiftId")
+                        .HasColumnType("INTEGER");
 
-                    b.Navigation("Shift");
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ShiftId", "ServiceId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("ShiftServices", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Shift", b =>
@@ -183,14 +181,24 @@ namespace Infrastucture.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ShiftService", b =>
+                {
+                    b.HasOne("Domain.Entities.ServicesAndHaircuts", null)
+                        .WithMany()
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Shift", null)
+                        .WithMany()
+                        .HasForeignKey("ShiftId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Domain.Entities.BarberShop", b =>
                 {
                     b.Navigation("Shifts");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Shift", b =>
-                {
-                    b.Navigation("Services");
                 });
 #pragma warning restore 612, 618
         }

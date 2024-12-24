@@ -46,7 +46,7 @@ namespace Domain.Entities
 
         [Required]
 
-        public List<ServicesAndHaircuts>? Services { get; set; } = new List<ServicesAndHaircuts>();
+        public ICollection<ServicesAndHaircuts> Services { get; set; }
 
         [Required]
 

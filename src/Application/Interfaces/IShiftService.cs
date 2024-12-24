@@ -15,6 +15,10 @@ namespace Application.Interfaces
 
         ShiftDto AddNewShift(ShiftCreateRequest shiftDto);
 
-        Task<Shift> ConfirmShiftAsync(int shiftId, int clientId, IEnumerable<int> serviceIds, bool payShift);
+        Task ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
+
+        Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day);
+
+        Task CancelShift(int shiftId);
     }
 }

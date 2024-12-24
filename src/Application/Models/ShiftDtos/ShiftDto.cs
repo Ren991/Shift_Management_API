@@ -31,7 +31,7 @@ namespace Application.Models.ShiftDtos
 
         public int? BarberShopID { get; set; }
 
-        public ICollection<ServicesAndHaircutsDto> Services { get; set; } = new List<ServicesAndHaircutsDto>();
+        public ICollection<ServicesAndHaircuts>? Services { get; set; } 
 
         public DateTime? Day { get; set; }
 

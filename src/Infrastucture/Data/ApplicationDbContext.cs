@@ -38,6 +38,11 @@ namespace Infrastructure.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Shift>()
+                .Property(s => s.ClientID)
+                .IsRequired(false); // Permitir valores nulos
+
+
+            modelBuilder.Entity<Shift>()
                 .HasOne(s => s.User)
                 .WithMany() // No inverse navigation property needed as Client is also a User
                 .HasForeignKey(s => s.BarberID)
@@ -51,13 +56,26 @@ namespace Infrastructure.Data
             modelBuilder.Entity<Shift>()
                 .HasOne(s => s.BarberShop);// One Shift belongs to one BarberShop
 
+            // Relación Many-to-Many entre Shift y ServicesAndHaircuts
+            // Configuración de la relación Many-to-Many entre Shift y ServicesAndHaircuts
             modelBuilder.Entity<Shift>()
-
                 .HasMany(s => s.Services)
-                .WithOne(s => s.Shift)
-                .HasForeignKey(s => s.ShiftId);
-
-            
+                .WithMany() // No necesitas definir la navegación inversa en ServicesAndHaircuts
+                .UsingEntity<Dictionary<string, object>>(
+                    "ShiftService",
+                    j => j.HasOne<ServicesAndHaircuts>()
+                          .WithMany()
+                          .HasForeignKey("ServiceId")
+                          .OnDelete(DeleteBehavior.Cascade), // Define el comportamiento de eliminación
+                    j => j.HasOne<Shift>()
+                          .WithMany()
+                          .HasForeignKey("ShiftId")
+                          .OnDelete(DeleteBehavior.Cascade), // Define el comportamiento de eliminación
+                    j =>
+                    {
+                        j.HasKey("ShiftId", "ServiceId"); // Llave compuesta
+                        j.ToTable("ShiftServices");      // Nombre de la tabla intermedia
+                    });
 
 
         }

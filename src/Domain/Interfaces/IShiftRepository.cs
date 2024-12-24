@@ -9,9 +9,13 @@ namespace Domain.Interfaces
 {
     public interface IShiftRepository : IRepositoryBase<Shift>
     {
-        Task<List<Shift>> GetAllShifts();
-        Task<Shift> UpdateAsync(Shift shift);
+        Task ConfirmShiftAsync(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
+        Task<Shift> GetShiftWithServicesAsync(int shiftId);
 
+        Task<List<ServicesAndHaircuts>> GetServicesByIdsAsync(IEnumerable<int> serviceIds);
 
+        Task SaveChangesAsync();
+
+        Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day);
     }
 }

@@ -31,8 +31,27 @@ namespace Web.Controllers
         [HttpPost("confirm")]
         public async Task<IActionResult> ConfirmShift(int shiftId, int clientId, [FromBody] IEnumerable<int> serviceIds, bool payShift)
         {
-           var shiftConfirmed = _shiftService.ConfirmShiftAsync(shiftId, clientId, serviceIds, payShift);
-            return Ok(shiftConfirmed);
+            await _shiftService.ConfirmShift(shiftId, clientId, serviceIds, payShift);
+            return Ok();
         }
+
+
+        [HttpGet("filter")]
+        public IActionResult FindByDayAndBarberShop([FromQuery] int barberShopId, [FromQuery] DateTime day) 
+        {
+            var filteredShift = _shiftService.GetByBarberShopAndDay(barberShopId, day);
+
+            return Ok(filteredShift);
+        }
+
+        [HttpPut("cancel-shift")]
+        public async Task<IActionResult> CancelShift([FromQuery] int shiftId)
+        { 
+           await  _shiftService.CancelShift(shiftId);
+
+            return Ok();
+           
+        }
+
     }
 }
