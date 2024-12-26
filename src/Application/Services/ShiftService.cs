@@ -5,6 +5,7 @@ using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -63,16 +64,24 @@ namespace Application.Services
                 throw new Exception("Turno no encontrado");
             }
 
-            //Validar que el turno no  este confirmado
-            //if (shift.Confirmed == true) {
-            //    throw new Exception("Shift is confirmed already");
-            //}
 
             // Validar que el cliente exista
             var user = _userRepository.Get(clientId);
             if (user == null)
             {
                 throw new Exception("Usuario no encontrado");
+            }
+
+            var shiftsForClientOnSameDay = await _shiftRepository.GetByBarberShopAndDay(shift.BarberShopID, shift.Day);
+                                                         // <-- Aquí se ejecuta la tarea y se obtiene la lista
+
+            // Ahora puedes aplicar Where a la lista
+            var filteredShifts = shiftsForClientOnSameDay.Where(s => s.ClientID == clientId).ToList();
+
+            // Validar la cantidad de turnos
+            if (filteredShifts.Count >= 1)
+            {
+                throw new Exception("El usuario ya tiene un turno reservado para este día.");
             }
 
             // Marcar el turno como confirmado y asociar el cliente
@@ -101,7 +110,7 @@ namespace Application.Services
             await _shiftRepository.SaveChangesAsync();
         }
 
-        public async Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day)
+        public async Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateOnly day)
         {
             return await _shiftRepository.GetByBarberShopAndDay(barberShopId, day);
         }
@@ -121,6 +130,13 @@ namespace Application.Services
 
             // Guardar los cambios
             await _shiftRepository.SaveChangesAsync();
+        }
+
+        public async Task<List<Shift>> GetShiftByUser(int userId)
+        {
+
+            
+            return await _shiftRepository.GetShiftByUserId(userId);
         }
     }
 }

@@ -42,7 +42,7 @@ namespace Domain.Entities
 
         [Required]
 
-        public int? BarberShopID { get; set; }
+        public int BarberShopID { get; set; }
 
         [Required]
 
@@ -50,7 +50,7 @@ namespace Domain.Entities
 
         [Required]
 
-        public DateTime? Day { get; set; }
+        public DateOnly Day { get; set; } // DD/MM/YYYY
 
         [Required]
         public string? ShiftTime { get; set; }

@@ -33,7 +33,7 @@ namespace Web.Controllers
 
         [Authorize(Roles = "Client")]
         [HttpPost("confirm")]
-        public async Task<IActionResult> ConfirmShift(int shiftId, int clientId, [FromBody] IEnumerable<int> serviceIds, bool payShift)
+        public async Task<IActionResult> ConfirmShift(int shiftId, int clientId, IEnumerable<int> serviceIds, bool payShift)
         {
             await _shiftService.ConfirmShift(shiftId, clientId, serviceIds, payShift);
             return Ok();
@@ -41,7 +41,7 @@ namespace Web.Controllers
 
         [Authorize]
         [HttpGet("filter")]
-        public IActionResult FindByDayAndBarberShop([FromQuery] int barberShopId, [FromQuery] DateTime day) 
+        public IActionResult FindByDayAndBarberShop(int barberShopId, DateOnly day) 
         {
             var filteredShift = _shiftService.GetByBarberShopAndDay(barberShopId, day);
 
@@ -50,12 +50,27 @@ namespace Web.Controllers
 
         [Authorize(Roles = "Client")]
         [HttpPut("cancel-shift")]
-        public async Task<IActionResult> CancelShift([FromQuery] int shiftId)
+        public async Task<IActionResult> CancelShift( int shiftId)
         { 
-           await  _shiftService.CancelShift(shiftId);
+           await _shiftService.CancelShift(shiftId);
 
-            return Ok();
+           return Ok();
            
+        }
+
+        [Authorize(Roles="Client")]
+        [HttpGet("get-shifts-by-user")]
+        public IActionResult GetShiftsById()
+        {
+            var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+            {
+                throw new Exception("User ID is not valid.");
+            }
+
+            var shifts = _shiftService.GetShiftByUser(userId);
+            return Ok(shifts);
         }
 
     }
