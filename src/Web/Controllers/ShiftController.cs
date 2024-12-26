@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.Models.ShiftDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
@@ -14,6 +15,7 @@ namespace Web.Controllers
             _shiftService = shiftService;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -21,6 +23,7 @@ namespace Web.Controllers
             return Ok(shifts);
         }
 
+        [Authorize(Roles = "Admin,Barber")]
         [HttpPost]
         public IActionResult AddShift([FromBody] ShiftCreateRequest shift)
         {
@@ -28,6 +31,7 @@ namespace Web.Controllers
             return Ok(newShift);
         }
 
+        [Authorize(Roles = "Client")]
         [HttpPost("confirm")]
         public async Task<IActionResult> ConfirmShift(int shiftId, int clientId, [FromBody] IEnumerable<int> serviceIds, bool payShift)
         {
@@ -35,7 +39,7 @@ namespace Web.Controllers
             return Ok();
         }
 
-
+        [Authorize]
         [HttpGet("filter")]
         public IActionResult FindByDayAndBarberShop([FromQuery] int barberShopId, [FromQuery] DateTime day) 
         {
@@ -44,6 +48,7 @@ namespace Web.Controllers
             return Ok(filteredShift);
         }
 
+        [Authorize(Roles = "Client")]
         [HttpPut("cancel-shift")]
         public async Task<IActionResult> CancelShift([FromQuery] int shiftId)
         { 

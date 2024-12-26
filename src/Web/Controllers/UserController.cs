@@ -1,6 +1,8 @@
 ﻿using Application.Interfaces;
 using Application.Models.UserDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ServiceStack.Web;
 
 namespace Web.Controllers
 {
@@ -14,6 +16,7 @@ namespace Web.Controllers
             _userService = userService;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -23,6 +26,8 @@ namespace Web.Controllers
             return Ok(users);
         }
 
+
+
         [HttpGet("/email")]
 
         public IActionResult GetByEmail([FromQuery] string email)
@@ -30,15 +35,19 @@ namespace Web.Controllers
             return Ok(_userService.GetUserByEmail(email));
         }
 
+ 
         [HttpPost]
 
         public IActionResult AddUser([FromBody] UserCreateRequest user) // Este endpoint es para crear usuario comunes.
 
         {
+
+
             var newUser = _userService.AddNewUser(user);
             return Ok(newUser);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{userId}")]
 
         public IActionResult DeleteUser([FromRoute] int userId)

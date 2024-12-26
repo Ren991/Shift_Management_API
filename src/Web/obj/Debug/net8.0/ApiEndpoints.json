@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Web.Controllers.AuthenticationController",
+    "Method": "Autenticar",
+    "RelativePath": "api/Authentication/authenticate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "Application.Models.AuthDtos.UserLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Web.Controllers.BarberShopController",
     "Method": "GetAll",
     "RelativePath": "api/BarberShop",
@@ -171,7 +197,7 @@
     "ContainingType": "Web.Controllers.ShiftController",
     "Method": "ConfirmShift",
     "RelativePath": "api/Shift/confirm",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

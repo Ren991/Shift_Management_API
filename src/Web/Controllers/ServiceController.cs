@@ -23,12 +23,12 @@ namespace Web.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var userTypeString = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
             var services = _servicesAndHaircutService.GetAllServices();
 
             return Ok(services);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
 
         public IActionResult AddService([FromBody] ServicesAndHaircutsRequest service) // Este endpoint es para crear usuario comunes.
@@ -38,6 +38,8 @@ namespace Web.Controllers
             return Ok(newService);
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpPut("edit")]
 
         public IActionResult UpdateService(int id, double price)
@@ -51,7 +53,7 @@ namespace Web.Controllers
 
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{serviceId}")]
 
         public IActionResult DeleteService([FromRoute] int serviceId)

@@ -3,6 +3,7 @@ using Application.Models.BarberShopDtos;
 using Application.Models.ServicesAndHaircutsDtos;
 using Application.Services;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceStack;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
@@ -19,6 +20,7 @@ namespace Web.Controllers
             _barberShopService = barberShopService;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -28,6 +30,7 @@ namespace Web.Controllers
             return Ok(barberShops);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
 
         public IActionResult AddBarberShop([FromBody] BarberShopRequest barberShop) // Este endpoint es para crear usuario comunes.
@@ -37,6 +40,7 @@ namespace Web.Controllers
             return Ok(newBarberShop);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{barberShopId}")]
 
         public IActionResult DeleteBarberShop([FromRoute] int barberShopId)
@@ -46,6 +50,7 @@ namespace Web.Controllers
             return Ok(new { message = "BarberShop deleted successfully." });
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("edit")]
 
         public IActionResult UpdateName( int id, string premiseName) 

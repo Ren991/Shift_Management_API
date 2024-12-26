@@ -40,7 +40,6 @@ namespace Infrastructure.Services
 
             if (user == null) return null;
 
-            if (user == null) return null;
 
             if (user.IsActive == false) return null;
 
