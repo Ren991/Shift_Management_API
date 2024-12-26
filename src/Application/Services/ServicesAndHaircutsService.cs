@@ -72,7 +72,7 @@ namespace Application.Services
             if (service != null)
             {
                 service.IsActive = false;
-                _servicesAndHaircutsRepository.Update(service);
+                _servicesAndHaircutsRepository.SaveChangesAsync();
             }
             else
             {

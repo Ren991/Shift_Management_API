@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastucture.Data
 {
-    public class ServicesAndHaircutsRepository: RepositoryBase<ServicesAndHaircuts>, IServicesAndHaircutsRepository
+    public class ServicesAndHaircutsRepository : RepositoryBase<ServicesAndHaircuts>, IServicesAndHaircutsRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -34,5 +34,12 @@ namespace Infrastucture.Data
         {
             return _context.ServicesAndHaircuts.FirstOrDefault(u => u.Id == id);
         }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
+
     }
 }

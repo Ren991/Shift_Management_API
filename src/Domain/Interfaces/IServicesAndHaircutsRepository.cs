@@ -14,5 +14,7 @@ namespace Domain.Interfaces
         public ServicesAndHaircuts? GetByName(string name);
 
         public ServicesAndHaircuts? GetById(int id);
+
+        public Task SaveChangesAsync();
     }
 }
