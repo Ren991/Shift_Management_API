@@ -27,6 +27,11 @@ namespace Infrastucture.Data
             return _dbContext.Set<T>().Find(new object[] { id });
         }
 
+        /*public IEnumerable<T> GetAllActive()
+        {
+            return _dbContext.Set<T>().Where(ex => ex.GetType().GetProperty("IsActive")!.Equals(true));
+        }*/
+
         public T Create(T entity)
         {
             _dbContext.Set<T>().Add(entity);

@@ -11,7 +11,7 @@ namespace Application.Interfaces
 {
     public interface IServicesAndHaircutsService
     {
-        List<ServicesAndHaircuts> GetAllServices();
+        IEnumerable<ServicesAndHaircuts> GetAllServices();
         
         ServicesAndHaircutsDto AddNewService(ServicesAndHaircutsRequest serviceDto);
 

@@ -91,11 +91,19 @@ namespace Infrastucture.Data
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day)
+        public async Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateOnly day)
         {
             return await _context.Shift
-                 .Include(s => s.Services) // Incluye los servicios relacionados si es necesario
-                .Where(s => s.BarberShopID == barberShopId && s.Day.HasValue && s.Day.Value.Date == day.Date)
+                .Include(s => s.Services)
+                .Where(s => s.BarberShopID == barberShopId && s.Day == day)
+                .ToListAsync();
+        }
+
+        public async Task<List<Shift>> GetShiftByUserId(int userId)
+        {
+            return await _context.Shift
+                .Include(s => s.Services) // Include related services if needed
+                .Where(s => s.ClientID == userId) // Filter by clientID
                 .ToListAsync();
         }
 

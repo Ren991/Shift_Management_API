@@ -2,7 +2,10 @@
 using Application.Models.ServicesAndHaircutsDtos;
 using Application.Models.UserDtos;
 using Application.Services;
+using Domain.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Web.Controllers
 {
@@ -16,16 +19,16 @@ namespace Web.Controllers
             _servicesAndHaircutService = servicesAndHaircutService;
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
         {
-
             var services = _servicesAndHaircutService.GetAllServices();
 
             return Ok(services);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
 
         public IActionResult AddService([FromBody] ServicesAndHaircutsRequest service) // Este endpoint es para crear usuario comunes.
@@ -35,6 +38,8 @@ namespace Web.Controllers
             return Ok(newService);
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpPut("edit")]
 
         public IActionResult UpdateService(int id, double price)
@@ -48,7 +53,7 @@ namespace Web.Controllers
 
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{serviceId}")]
 
         public IActionResult DeleteService([FromRoute] int serviceId)

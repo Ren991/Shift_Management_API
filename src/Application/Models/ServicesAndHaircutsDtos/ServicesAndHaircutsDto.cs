@@ -34,6 +34,15 @@ namespace Application.Models.ServicesAndHaircutsDtos
 
         }
 
+        public static ICollection<ServicesAndHaircutsDto> ToCollectionDto(ICollection<ServicesAndHaircuts> services)
+        {
+            return services.Select(service => new ServicesAndHaircutsDto
+            {
+                Id = service.Id,
+                Name = service.Name,
+                Price = service.Price
+            }).ToList();
+        }
 
     }
 }

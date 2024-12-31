@@ -20,7 +20,7 @@ namespace Application.Models.UserDtos
             public string Email { get; set; }
             public string Password { get; set; }
 
-            public UserType UserType { get; set; }
+            public Role Role { get; set; }
 
             
 
@@ -34,7 +34,7 @@ namespace Application.Models.UserDtos
                 userDto.LastName = user.LastName;
                 userDto.Email = user.Email;
                 userDto.Password = user.Password;
-                userDto.UserType = user.UserType;
+                userDto.Role = user.Role;
                 userDto.IsActive = user.IsActive;
 
                 return userDto;

@@ -9,6 +9,7 @@ namespace Domain.Interfaces
 {
     public interface IBarberShopRepository: IRepositoryBase<BarberShop>
     {
+        
         public BarberShop? GetByCity(string city);
     }
 }
