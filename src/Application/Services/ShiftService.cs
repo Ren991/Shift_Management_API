@@ -4,6 +4,7 @@ using Domain.Entities;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -115,12 +116,30 @@ namespace Application.Services
             return await _shiftRepository.GetByBarberShopAndDay(barberShopId, day);
         }
 
-        public async Task CancelShift(int shiftId)
+        public async Task CancelShift(int shiftId, int userId)
         {
             var shift = await _shiftRepository.GetShiftWithServicesAsync(shiftId);
             if (shift == null)
             {
                 throw new Exception("Turno no encontrado");
+            }
+
+            if(userId != shift.ClientID)
+            {
+                throw new Exception("Usuario no coincide");
+            }
+
+            var shiftDateTime = DateTime.ParseExact(
+                $"{shift.Day} {shift.ShiftTime}",
+                "dd/MM/yyyy HH:mm", // Cambiado el formato al esperado
+                CultureInfo.InvariantCulture
+            );
+
+            // Validar si el turno puede ser cancelado con 24 horas de anticipación
+            var currentTime = DateTime.UtcNow; 
+            if (shiftDateTime < currentTime.AddHours(24))
+            {
+                throw new Exception("El turno no puede ser cancelado con menos de 24 horas de anticipación");
             }
 
             shift.Confirmed = false;

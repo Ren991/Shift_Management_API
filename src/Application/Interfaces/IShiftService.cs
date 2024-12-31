@@ -21,6 +21,6 @@ namespace Application.Interfaces
 
         Task<List<Shift>> GetShiftByUser(int userId);
 
-        Task CancelShift(int shiftId);
+        Task CancelShift(int shiftId, int userId);
     }
 }

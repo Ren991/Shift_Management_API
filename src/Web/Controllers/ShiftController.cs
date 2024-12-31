@@ -51,8 +51,15 @@ namespace Web.Controllers
         [Authorize(Roles = "Client")]
         [HttpPut("cancel-shift")]
         public async Task<IActionResult> CancelShift( int shiftId)
-        { 
-           await _shiftService.CancelShift(shiftId);
+        {
+            var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+            {
+                throw new Exception("User ID is not valid.");
+            }
+
+            await _shiftService.CancelShift(shiftId,userId);
 
            return Ok();
            
