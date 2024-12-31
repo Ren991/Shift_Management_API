@@ -80,5 +80,22 @@ namespace Web.Controllers
             return Ok(shifts);
         }
 
+        [Authorize(Roles = "Admin,Barber")]
+        [HttpPost("create-predefined")]
+        public async Task<IActionResult> CreatePredefinedShifts(int month , int year, int barberShopId)
+        {
+            try
+            {
+                // Llama al servicio para crear los turnos
+                await _shiftService.CreatePredefinedShifts(month, year, barberShopId);
+
+                return Ok(new { Message = "Turnos predefinidos creados exitosamente." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Error = ex.Message });
+            }
+        }
+
     }
 }

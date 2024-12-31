@@ -157,5 +157,56 @@ namespace Application.Services
             
             return await _shiftRepository.GetShiftByUserId(userId);
         }
+
+        public async Task CreatePredefinedShifts(int month, int year, int barberShopID)
+        {
+            // Validar entrada
+            if (month < 1 || month > 12)
+                throw new Exception("El mes es inválido.");
+
+            if (year < DateTime.UtcNow.Year)
+                throw new Exception("El año no puede ser menor al actual.");
+
+            if (barberShopID <= 0)
+                throw new Exception("BarberShopID inválido.");
+
+            // Configuración fija
+            var startTime = new TimeSpan(9, 0, 0); // 09:00
+            var endTime = new TimeSpan(18, 0, 0);  // 18:00
+            var workingDays = new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday };
+
+            // Generar los turnos
+            //var shiftsToCreate = new List<Shift>();
+            var daysInMonth = DateTime.DaysInMonth(year, month);
+
+            for (int day = 1; day <= daysInMonth; day++)
+            {
+                var currentDate = new DateTime(year, month, day);
+
+                if (workingDays.Contains(currentDate.DayOfWeek))
+                {
+                    for (var time = startTime; time < endTime; time = time.Add(TimeSpan.FromHours(1)))
+                    {
+                        var shift = new Shift
+                        {
+                            Day = DateOnly.FromDateTime(currentDate),
+                            ShiftTime = time.ToString(@"hh\:mm"),
+                            Confirmed = false,
+                            IsPayabled = false,
+                            BarberShopID = barberShopID,
+                            BarberID = 1,
+                            Price = 0
+                        };
+                        //shiftsToCreate.Add(shift);
+                        _shiftRepository.Create(shift);
+                    }
+                }
+            }
+
+            // Guardar los turnos
+            //await _shiftRepository.AddRangeAsync(shiftsToCreate);
+            await _shiftRepository.SaveChangesAsync();
+        }
+
     }
 }

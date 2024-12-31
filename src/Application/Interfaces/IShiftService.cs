@@ -22,5 +22,7 @@ namespace Application.Interfaces
         Task<List<Shift>> GetShiftByUser(int userId);
 
         Task CancelShift(int shiftId, int userId);
+
+        Task CreatePredefinedShifts(int month, int year, int barberShopID);
     }
 }
