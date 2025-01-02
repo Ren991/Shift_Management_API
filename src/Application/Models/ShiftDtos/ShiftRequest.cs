@@ -22,7 +22,7 @@ namespace Application.Models.ShiftDtos
         public int BarberShopID { get; set; }
 
         [Required]
-        public DateTime Day { get; set; }
+        public DateOnly Day { get; set; } 
 
         [Required]
         public string ShiftTime { get; set; }
@@ -35,8 +35,7 @@ namespace Application.Models.ShiftDtos
             shift.Confirmed = false;
             shift.BarberID = shiftCreateRequest.BarberID;
             shift.Day = shiftCreateRequest.Day;
-            shift.BarberShopID = shiftCreateRequest.BarberShopID;
-            shift.ClientID = 2;
+            shift.BarberShopID = shiftCreateRequest.BarberShopID;            
             shift.IsPayabled = false;
             shift.ShiftTime = shiftCreateRequest.ShiftTime;
 

@@ -17,8 +17,12 @@ namespace Application.Interfaces
 
         Task ConfirmShift(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
 
-        Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day);
+        Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateOnly day);
 
-        Task CancelShift(int shiftId);
+        Task<List<Shift>> GetShiftByUser(int userId);
+
+        Task CancelShift(int shiftId, int userId);
+
+        Task CreatePredefinedShifts(int month, int year, int barberShopID);
     }
 }

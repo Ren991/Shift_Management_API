@@ -12,10 +12,14 @@ namespace Domain.Interfaces
         Task ConfirmShiftAsync(int shiftId, int clientId, IEnumerable<int>? serviceIds, bool payShift);
         Task<Shift> GetShiftWithServicesAsync(int shiftId);
 
+        Task<List<Shift>> GetShiftByUserId(int userId);
+
         Task<List<ServicesAndHaircuts>> GetServicesByIdsAsync(IEnumerable<int> serviceIds);
 
         Task SaveChangesAsync();
 
-        Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateTime day);
+        Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateOnly day);
+
+
     }
 }
