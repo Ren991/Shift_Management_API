@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|c:\\users\\renzo\\documents\\shift_management\\shift_management_api\\shift_management_api\\src\\web\\web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|solutionrelative:src\\web\\web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1CED3D3-321F-43CD-836E-0409FA950C5F}|src\\Application\\Application.csproj|c:\\users\\renzo\\documents\\shift_management\\shift_management_api\\shift_management_api\\src\\application\\services\\shiftservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1CED3D3-321F-43CD-836E-0409FA950C5F}|src\\Application\\Application.csproj|solutionrelative:src\\application\\services\\shiftservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -66,11 +70,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Web",
+              "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
+              "RelativeDocumentMoniker": "src\\Web\\Web.csproj",
+              "ToolTip": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
+              "RelativeToolTip": "src\\Web\\Web.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-02T16:21:40.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Shift.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Domain\\Entities\\Shift.cs",
               "RelativeDocumentMoniker": "src\\Domain\\Entities\\Shift.cs",
@@ -78,12 +95,11 @@
               "RelativeToolTip": "src\\Domain\\Entities\\Shift.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAAADQAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T22:41:33.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T22:41:33.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ShiftDto.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Models\\ShiftDtos\\ShiftDto.cs",
               "RelativeDocumentMoniker": "src\\Application\\Models\\ShiftDtos\\ShiftDto.cs",
@@ -95,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "src\\Domain\\Entities\\User.cs",
@@ -107,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ServiceController.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\ServiceController.cs",
@@ -115,12 +131,11 @@
               "RelativeToolTip": "src\\Web\\Controllers\\ServiceController.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAAAAcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T22:22:13.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T22:22:13.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Infrastucture\\Services\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Services\\AuthenticationService.cs",
@@ -132,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IShiftRepository.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Domain\\Interfaces\\IShiftRepository.cs",
               "RelativeDocumentMoniker": "src\\Domain\\Interfaces\\IShiftRepository.cs",
@@ -144,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ShiftRepository.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Infrastucture\\Data\\ShiftRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Data\\ShiftRepository.cs",
@@ -152,25 +167,24 @@
               "RelativeToolTip": "src\\Infrastucture\\Data\\ShiftRepository.cs",
               "ViewState": "AQIAAGMAAAAAAAAAAAAUwGsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T21:16:42.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T21:16:42.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ShiftService.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Services\\ShiftService.cs",
               "RelativeDocumentMoniker": "src\\Application\\Services\\ShiftService.cs",
               "ToolTip": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Services\\ShiftService.cs",
               "RelativeToolTip": "src\\Application\\Services\\ShiftService.cs",
-              "ViewState": "AQIAALAAAAAAAAAAAAAQwMEAAAAuAAAA",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAQwMsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T21:28:00.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ShiftController.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\Controllers\\ShiftController.cs",
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\ShiftController.cs",
@@ -178,12 +192,11 @@
               "RelativeToolTip": "src\\Web\\Controllers\\ShiftController.cs",
               "ViewState": "AQIAAFEAAAAAAAAAAAAAwF0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T20:53:41.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T20:53:41.874Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IShiftService.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Interfaces\\IShiftService.cs",
               "RelativeDocumentMoniker": "src\\Application\\Interfaces\\IShiftService.cs",
@@ -191,12 +204,11 @@
               "RelativeToolTip": "src\\Application\\Interfaces\\IShiftService.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAcwBkAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T21:25:32.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T21:25:32.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ShiftRequest.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Models\\ShiftDtos\\ShiftRequest.cs",
               "RelativeDocumentMoniker": "src\\Application\\Models\\ShiftDtos\\ShiftRequest.cs",
@@ -208,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "20241210002011_shift add.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20241210002011_shift add.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Migrations\\20241210002011_shift add.cs",
@@ -220,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\UserController.cs",
@@ -232,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "src\\Application\\Services\\UserService.cs",
