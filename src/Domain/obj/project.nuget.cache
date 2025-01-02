@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7D5nYTBFK5CNickNDkUMCorZ4VDCR0R5YKYQrf8zNUr4MMVeOtwR3FgH+ODErpEsP1zdvsJD6jCGWhXmdhzizg==",
+  "dgSpecHash": "cBSnlCFXzpQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

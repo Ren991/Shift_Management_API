@@ -226,6 +226,32 @@
   },
   {
     "ContainingType": "Web.Controllers.ShiftController",
+    "Method": "CreatePredefinedShifts",
+    "RelativePath": "api/Shift/create-predefined",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "barberShopId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ShiftController",
     "Method": "FindByDayAndBarberShop",
     "RelativePath": "api/Shift/filter",
     "HttpMethod": "GET",
@@ -239,10 +265,20 @@
       },
       {
         "Name": "day",
-        "Type": "System.DateTime",
+        "Type": "System.DateOnly",
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ShiftController",
+    "Method": "GetShiftsById",
+    "RelativePath": "api/Shift/get-shifts-by-user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
