@@ -20,4 +20,4 @@ COPY --from=build /app/out .
 EXPOSE 7039
 
 # Comando para ejecutar la aplicación
-ENTRYPOINT ["dotnet", "Shift_management.dll"]
+ENTRYPOINT ["dotnet","shift_management.dll"]
