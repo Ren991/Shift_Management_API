@@ -124,10 +124,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Usar CORS
-app.UseCors("AllowFrontend");
+
 
 app.UseHttpsRedirection();
+
+// Usar CORS
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 
