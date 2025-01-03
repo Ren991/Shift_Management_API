@@ -83,7 +83,19 @@ builder.Services.AddAuthorization(options =>
 
 
 
+// Configurar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // URL del frontend
+              .AllowAnyHeader() // Permite cualquier encabezado
+              .AllowAnyMethod() // Permite cualquier método HTTP (GET, POST, etc.)
+              .AllowCredentials(); // Si utilizas cookies o autenticación basada en sesiones
+    });
+});
 
+builder.Services.AddControllers();
 
 
 
@@ -111,6 +123,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Usar CORS
+app.UseCors("AllowFrontend");
 
 app.UseHttpsRedirection();
 
