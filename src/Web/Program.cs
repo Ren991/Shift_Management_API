@@ -12,10 +12,11 @@ using System.Text;
 using System.Text.Json.Serialization;
 using static Infrastructure.Services.AuthenticationService;
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "7039";
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-
+builder.WebHost.UseUrls($"http://*:{port}");
 // Add services to the container.
 
 builder.Services.AddControllers()
@@ -32,7 +33,7 @@ builder.Services.AddSwaggerGen(setupAction =>
     {
         Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
-        Description = "Acá pegar el token generado al loguearse."
+        Description = "Acï¿½ pegar el token generado al loguearse."
     });
 
     setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -43,7 +44,7 @@ builder.Services.AddSwaggerGen(setupAction =>
                 Reference = new OpenApiReference
                 {
                     Type = ReferenceType.SecurityScheme,
-                    Id = "barbershopManagement" } //Tiene que coincidir con el id seteado arriba en la definición
+                    Id = "barbershopManagement" } //Tiene que coincidir con el id seteado arriba en la definiciï¿½n
                 }, new List<string>() }
     });
 
@@ -59,8 +60,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(dbContextOptions => dbContex
 builder.Services.Configure<AuthenticationServiceOptions>(
     builder.Configuration.GetSection(AuthenticationServiceOptions.AuthenticationService));
 
-builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntenticación que tenemos que elegir después en PostMan para pasarle el token
-    .AddJwtBearer(options => //Acá definimos la configuración de la autenticación. le decimos qué cosas queremos comprobar. La fecha de expiración se valida por defecto.
+builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntenticaciï¿½n que tenemos que elegir despuï¿½s en PostMan para pasarle el token
+    .AddJwtBearer(options => //Acï¿½ definimos la configuraciï¿½n de la autenticaciï¿½n. le decimos quï¿½ cosas queremos comprobar. La fecha de expiraciï¿½n se valida por defecto.
     {
         options.TokenValidationParameters = new()
         {
@@ -90,8 +91,8 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins("http://localhost:5173") // URL del frontend
               .AllowAnyHeader() // Permite cualquier encabezado
-              .AllowAnyMethod() // Permite cualquier método HTTP (GET, POST, etc.)
-              .AllowCredentials(); // Si utilizas cookies o autenticación basada en sesiones
+              .AllowAnyMethod() // Permite cualquier mï¿½todo HTTP (GET, POST, etc.)
+              .AllowCredentials(); // Si utilizas cookies o autenticaciï¿½n basada en sesiones
     });
 });
 
