@@ -14,7 +14,8 @@ RUN dotnet restore
 
 # Copiar todo el código y construir
 COPY . ./
-COPY ["Web/barbershop.db","/app/barbershop.db"]
+
+COPY ["src/Web/barbershop.db" , "src/Web/"]
 RUN dotnet publish src/Web/Web.csproj -c Release -o /app/out
 
 # Etapa 2: Configurar para ejecución
@@ -28,5 +29,5 @@ COPY --from=build /app/out .
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación
-ENTRYPOINT ["dotnet","Web.dll"]
+ENTRYPOINT ["dotnet", "Web.dll"]
 
