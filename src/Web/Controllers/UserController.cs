@@ -36,7 +36,7 @@ namespace Web.Controllers
         }
 
  
-        [HttpPost]
+        [HttpPost("/create-user")]
 
         public IActionResult AddUser([FromBody] UserCreateRequest user) // Este endpoint es para crear usuario comunes.
 
@@ -46,6 +46,18 @@ namespace Web.Controllers
             var newUser = _userService.AddNewUser(user);
             return Ok(newUser);
         }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("/create-admin")]
+
+        public IActionResult AddAdmin([FromBody] UserAdminRequest user) // Este endpoint es para crear usuario comunes.
+
+        {
+            var newUser = _userService.AddNewAdminUser(user);
+            return Ok(newUser);
+        }
+
+
 
         [Authorize(Roles = "Admin")]
         [HttpDelete("{userId}")]

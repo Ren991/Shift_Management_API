@@ -13,11 +13,9 @@ namespace Application.Interfaces
         List<User> GetAllUsers();
         UserDto AddNewUser(UserCreateRequest userDto);
 
-        //UserDto AddNewAdminUser(UserAdminCreateRequest userDto);
+        UserDto AddNewAdminUser(UserAdminRequest userDto);
 
         UserDto GetUserByEmail(string email);
-
-
 
         void UpdateUser(int id, string password);
 

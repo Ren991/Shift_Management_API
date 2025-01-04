@@ -78,8 +78,7 @@ namespace Infrastucture.Migrations
                         .IsRequired()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("BarberShopID")
-                        .IsRequired()
+                    b.Property<int>("BarberShopID")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("ClientID")
@@ -89,8 +88,7 @@ namespace Infrastucture.Migrations
                         .IsRequired()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime?>("Day")
-                        .IsRequired()
+                    b.Property<DateOnly>("Day")
                         .HasColumnType("TEXT");
 
                     b.Property<bool?>("IsPayabled")
@@ -144,7 +142,19 @@ namespace Infrastucture.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 10,
+                            Email = "admin@mati.com",
+                            FirstName = "Admin",
+                            IsActive = true,
+                            LastName = "User",
+                            Password = "123321",
+                            Role = 0
+                        });
                 });
 
             modelBuilder.Entity("ShiftService", b =>
@@ -167,7 +177,7 @@ namespace Infrastucture.Migrations
                     b.HasOne("Domain.Entities.User", "User")
                         .WithMany()
                         .HasForeignKey("BarberID")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.BarberShop", "BarberShop")
