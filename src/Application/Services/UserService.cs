@@ -44,15 +44,15 @@ namespace Application.Services
             return UserDto.ToDto(createdUser);
         }
 
-        /*public UserDto AddNewAdminUser(UserAdminCreateRequest userDto)
+        public UserDto AddNewAdminUser(UserAdminRequest userDto)
         {
-           /* var existingUser = _userRepository.GetByEmail(userDto.Email);
+            var existingUser = _userRepository.GetByEmail(userDto.Email);
             if (existingUser != null)
             {
-                throw new BadRequestException("Email already registered. Please try again.");
+                throw new Exception("Email already registered. Please try again.");
             }
-            return UserDto.ToDto(_userRepository.Create(UserAdminCreateRequest.ToEntity(userDto)));
-        }*/
+            return UserDto.ToDto(_userRepository.Create(UserAdminRequest.ToEntity(userDto)));
+        }
 
 
         public UserDto GetUserByEmail(string email)

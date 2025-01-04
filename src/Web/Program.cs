@@ -12,11 +12,11 @@ using System.Text;
 using System.Text.Json.Serialization;
 using static Infrastructure.Services.AuthenticationService;
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "7039";
+//var port = Environment.GetEnvironmentVariable("PORT") ?? "7039";
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.WebHost.UseUrls($"http://*:{port}");
+//builder.WebHost.UseUrls($"http://*:{port}");
 // Add services to the container.
 
 builder.Services.AddControllers()

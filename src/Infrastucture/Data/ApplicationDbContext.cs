@@ -33,11 +33,24 @@ namespace Infrastructure.Data
                       
             });
 
+            modelBuilder.Entity<User>().HasData(
+                new User
+                {
+                    Id = 10,
+                    FirstName = "Admin",
+                    LastName = "User",
+                    Email = "admin@mati.com",
+                    Password = "123321", 
+                    Role = Role.Admin,
+                    IsActive = true
+                }
+            );
+
             modelBuilder.Entity<Shift>()
                 .HasOne(s => s.User)
                 .WithMany() // No inverse navigation property needed as Client is also a User
                 .HasForeignKey(s => s.ClientID)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Shift>()
                 .Property(s => s.ClientID)
@@ -48,7 +61,7 @@ namespace Infrastructure.Data
                 .HasOne(s => s.User)
                 .WithMany() // No inverse navigation property needed as Client is also a User
                 .HasForeignKey(s => s.BarberID)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Shift>()
                 .HasOne(s => s.BarberShop)
