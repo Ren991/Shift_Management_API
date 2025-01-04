@@ -24,7 +24,7 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 # Exponer el puerto para Render
-EXPOSE 8080
+EXPOSE 7039
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["dotnet", "Web.dll"]

@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "src\\Web\\Program.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Program.cs",
               "RelativeToolTip": "src\\Web\\Program.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAAAGEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T18:37:15.929Z",
               "EditorCaption": ""
@@ -155,8 +155,7 @@
               "RelativeToolTip": "src\\Infrastucture\\Services\\AuthenticationService.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAQwDoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T22:22:03.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T22:22:03.749Z"
             },
             {
               "$type": "Document",
@@ -192,8 +191,7 @@
               "RelativeToolTip": "src\\Application\\Services\\ShiftService.cs",
               "ViewState": "AQIAAL8AAAAAAAAAAAAQwMsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T21:28:00.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T21:28:00.571Z"
             },
             {
               "$type": "Document",
@@ -241,8 +239,7 @@
               "RelativeToolTip": "src\\Web\\Controllers\\UserController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowCYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T21:05:18.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T21:05:18.269Z"
             },
             {
               "$type": "Document",
