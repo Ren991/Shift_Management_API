@@ -117,7 +117,12 @@ builder.Services.AddScoped<IShiftService,  ShiftService>();
 builder.Services.AddScoped<IPasswordHasherService, PasswordHasherService>();
 
 var app = builder.Build();
-
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.EnsureCreated(); // Crea la base de datos si no existe
+    dbContext.Database.Migrate(); // Aplica las migraciones pendientes
+}
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
