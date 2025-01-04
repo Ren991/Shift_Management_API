@@ -25,10 +25,12 @@ namespace Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(entity =>
-            {
+            {   
+                entity.ToTable("Users"); // Nombre de la tabla
                 entity.HasKey(p => p.Id);
                 entity.Property(p => p.Id)
                       .ValueGeneratedOnAdd();
+                      
             });
 
             modelBuilder.Entity<Shift>()
