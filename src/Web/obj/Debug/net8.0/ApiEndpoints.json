@@ -293,22 +293,6 @@
   },
   {
     "ContainingType": "Web.Controllers.UserController",
-    "Method": "AddUser",
-    "RelativePath": "api/User",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "user",
-        "Type": "Application.Models.UserDtos.UserCreateRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Web.Controllers.UserController",
     "Method": "DeleteUser",
     "RelativePath": "api/User/{userId}",
     "HttpMethod": "DELETE",
@@ -318,6 +302,38 @@
       {
         "Name": "userId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.UserController",
+    "Method": "AddAdmin",
+    "RelativePath": "create-admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Application.Models.UserDtos.UserAdminRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "create-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Application.Models.UserDtos.UserCreateRequest",
         "IsRequired": true
       }
     ],

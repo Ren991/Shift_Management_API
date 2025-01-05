@@ -23,7 +23,7 @@ namespace Web.Controllers
             return Ok(shifts);
         }
 
-        [Authorize(Roles = "Admin,Barber")]
+        [Authorize(Roles = "Admin,Barber")]//YYYY-MM-DD
         [HttpPost]
         public IActionResult AddShift([FromBody] ShiftCreateRequest shift)
         {
