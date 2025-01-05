@@ -68,5 +68,26 @@ namespace Web.Controllers
             _userService.DeleteUser(userId);
             return Ok(new { message = "User deleted successfully." });
         }
+
+
+        // [Authorize]
+        //[HttpGet("authenticated-user")]
+        //public IActionResult GetAuthenticatedUser()
+        //{
+        //    var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+        //    if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        //    {
+        //        return Unauthorized(new { message = "User ID is not valid." });
+        //    }
+
+        //    var user = _userService.GetUserById(userId);
+        //    if (user == null)
+        //    {
+        //        return NotFound(new { message = "User not found." });
+        //    }
+
+        //    return Ok(user);
+        //}
     }
 }
