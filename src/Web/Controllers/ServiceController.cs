@@ -19,7 +19,7 @@ namespace Web.Controllers
             _servicesAndHaircutService = servicesAndHaircutService;
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Client")]
         [HttpGet]
         public IActionResult GetAll()
         {
