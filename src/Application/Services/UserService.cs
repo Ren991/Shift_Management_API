@@ -95,7 +95,7 @@ namespace Application.Services
             var user = _userRepository.Get(userId);
             if (user != null)
             {
-                user.IsActive = false;
+                user.IsActive = 0;
                 _userRepository.Update(user);
             }
             else

@@ -4,7 +4,6 @@ using Domain.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Services;
 using Infrastucture.Data;
-using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -23,17 +22,16 @@ builder.Services.AddControllers()
    .AddJsonOptions(options =>
    {
        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-       // Prevent reference cycles
-       options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); // Convert Enums
+       options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
    });
 
 builder.Services.AddSwaggerGen(setupAction =>
 {
-    setupAction.AddSecurityDefinition("barbershopManagement", new OpenApiSecurityScheme() //Esto va a permitir usar swagger con el token.
+    setupAction.AddSecurityDefinition("barbershopManagement", new OpenApiSecurityScheme()
     {
         Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
-        Description = "Ac� pegar el token generado al loguearse."
+        Description = "Aquí pega el token generado al loguearse."
     });
 
     setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -44,24 +42,21 @@ builder.Services.AddSwaggerGen(setupAction =>
                 Reference = new OpenApiReference
                 {
                     Type = ReferenceType.SecurityScheme,
-                    Id = "barbershopManagement" } //Tiene que coincidir con el id seteado arriba en la definici�n
+                    Id = "barbershopManagement" }
                 }, new List<string>() }
     });
 
 });
 
-string connectionString = builder.Configuration["ConnectionStrings:BarberShopDBConnectionString"]!;
-
-// Configure the SQLite connection
-var connection = new SqliteConnection("Data Source= barbershop.db");
-connection.Open();
-builder.Services.AddDbContext<ApplicationDbContext>(dbContextOptions => dbContextOptions.UseSqlite(connection));
+string connectionString = builder.Configuration.GetConnectionString("PostgresConnection")!;
+builder.Services.AddDbContext<ApplicationDbContext>(dbContextOptions =>
+    dbContextOptions.UseNpgsql(connectionString));
 
 builder.Services.Configure<AuthenticationServiceOptions>(
     builder.Configuration.GetSection(AuthenticationServiceOptions.AuthenticationService));
 
-builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntenticaci�n que tenemos que elegir despu�s en PostMan para pasarle el token
-    .AddJwtBearer(options => //Ac� definimos la configuraci�n de la autenticaci�n. le decimos qu� cosas queremos comprobar. La fecha de expiraci�n se valida por defecto.
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new()
         {
@@ -72,8 +67,7 @@ builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntentica
             ValidAudience = builder.Configuration["AuthenticacionService:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["AuthenticacionService:SecretForKey"]))
         };
-    }
-);
+    });
 
 builder.Services.AddAuthorization(options =>
 {
@@ -82,26 +76,21 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("Barber", policy => policy.RequireRole("Barber"));
 });
 
-
-
 // Configurar CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173") // URL del frontend
-              .AllowAnyHeader() // Permite cualquier encabezado
-              .AllowAnyMethod() // Permite cualquier m�todo HTTP (GET, POST, etc.)
-              .AllowCredentials(); // Si utilizas cookies o autenticaci�n basada en sesiones
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
 
 builder.Services.AddControllers();
 
-
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IServicesAndHaircutsService, ServicesAndHaircutsService>();
@@ -111,26 +100,21 @@ builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IBarberShopRepository, BarberShopRepository>();
 builder.Services.AddScoped<IBarberShopService, BarberShopService>();
 builder.Services.AddScoped<IShiftRepository, ShiftRepository>();
-builder.Services.AddScoped<IShiftService,  ShiftService>();
-
-
+builder.Services.AddScoped<IShiftService, ShiftService>();
 builder.Services.AddScoped<IPasswordHasherService, PasswordHasherService>();
 
 var app = builder.Build();
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//using (var scope = app.Services.CreateScope())
+//{
+//    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//    dbContext.Database.Migrate();
+//}
 
-    dbContext.Database.Migrate(); // Aplica las migraciones pendientes
-}
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
 
 app.UseHttpsRedirection();
 

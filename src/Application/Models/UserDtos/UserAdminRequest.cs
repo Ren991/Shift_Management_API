@@ -34,7 +34,7 @@ namespace Application.Models.UserDtos
             user.Email = userDto.Email;
             user.Password = userDto.Password;
             user.Role = Role.Admin;
-            user.IsActive = true;
+            user.IsActive = 1;
 
             return user;
 

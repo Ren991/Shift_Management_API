@@ -32,7 +32,7 @@ namespace Domain.Entities
         public Role Role { get; set; }
 
         [Required]
-        public bool IsActive { get; set; }
+        public int IsActive { get; set; }
 
     }
 }
