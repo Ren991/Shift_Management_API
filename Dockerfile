@@ -14,8 +14,6 @@ RUN dotnet restore
 
 # Copiar todo el código y construir
 COPY . ./
-
-COPY ["src/Web/barbershop.db" , "src/Web/"]
 RUN dotnet publish src/Web/Web.csproj -c Release -o /app/out
 
 # Etapa 2: Configurar para ejecución
@@ -30,4 +28,3 @@ EXPOSE 8080
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["dotnet", "Web.dll"]
-
