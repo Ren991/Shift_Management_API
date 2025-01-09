@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|c:\\users\\pc\\onedrive - uca\\proyectos individuales 2024\\aplicacion barberia\\shift_management_api\\shift_management_api\\src\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|solutionrelative:src\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{722E496C-E089-4EFF-8219-BE53842595E6}|src\\Domain\\Domain.csproj|c:\\users\\pc\\onedrive - uca\\proyectos individuales 2024\\aplicacion barberia\\shift_management_api\\shift_management_api\\src\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{722E496C-E089-4EFF-8219-BE53842595E6}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{722E496C-E089-4EFF-8219-BE53842595E6}|src\\Domain\\Domain.csproj|c:\\users\\pc\\onedrive - uca\\proyectos individuales 2024\\aplicacion barberia\\shift_management_api\\shift_management_api\\src\\domain\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{722E496C-E089-4EFF-8219-BE53842595E6}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109225116_new Post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Infrastucture\\Migrations\\20250109225116_new Post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10EF76DE-4C82-4EDD-B965-0B64B81F94BD}|src\\Infrastucture\\Infrastucture.csproj|c:\\users\\pc\\onedrive - uca\\proyectos individuales 2024\\aplicacion barberia\\shift_management_api\\shift_management_api\\src\\infrastucture\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109223005_ds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Infrastucture\\Migrations\\20250109223005_ds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|c:\\users\\pc\\onedrive - uca\\proyectos individuales 2024\\aplicacion barberia\\shift_management_api\\shift_management_api\\src\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|solutionrelative:src\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109222625_ ps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -153,6 +149,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|c:\\users\\pc\\onedrive - uca\\proyectos individuales 2024\\aplicacion barberia\\shift_management_api\\shift_management_api\\src\\web\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6CBDB2D-245F-4758-8E89-17CAE3FAC5E8}|src\\Web\\Web.csproj|solutionrelative:src\\web\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10EF76DE-4C82-4EDD-B965-0B64B81F94BD}|src\\Infrastucture\\Infrastucture.csproj|c:\\users\\pc\\onedrive - uca\\proyectos individuales 2024\\aplicacion barberia\\shift_management_api\\shift_management_api\\src\\infrastucture\\migrations\\20250109225116_new post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10EF76DE-4C82-4EDD-B965-0B64B81F94BD}|src\\Infrastucture\\Infrastucture.csproj|solutionrelative:src\\infrastucture\\migrations\\20250109225116_new post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -162,11 +162,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 36,
+          "SelectedChildIndex": 23,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 37,
               "Title": "20250109225116_new Post.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109225116_new Post.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Migrations\\20250109225116_new Post.cs",
@@ -174,8 +174,7 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109225116_new Post.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:51:16.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:51:16.249Z"
             },
             {
               "$type": "Document",
@@ -187,8 +186,7 @@
               "RelativeToolTip": "src\\Application\\Models\\BarberShopDtos\\BarberShopRequest.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAADwvxsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:47:26.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:47:26.047Z"
             },
             {
               "$type": "Document",
@@ -200,8 +198,7 @@
               "RelativeToolTip": "src\\Application\\Models\\BarberShopDtos\\BarberShopDto.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAgwBQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:45:59.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:45:59.238Z"
             },
             {
               "$type": "Document",
@@ -213,8 +210,7 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109224309_df.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAArwBgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:43:09.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:43:09.599Z"
             },
             {
               "$type": "Document",
@@ -226,8 +222,7 @@
               "RelativeToolTip": "src\\Infrastucture\\Services\\AuthenticationService.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAQwCsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:40:48.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:40:48.032Z"
             },
             {
               "$type": "Document",
@@ -239,8 +234,7 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109223527_hd.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:35:27.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:35:27.559Z"
             },
             {
               "$type": "Document",
@@ -252,12 +246,11 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109223005_ds.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:30:05.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:30:05.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "20250109222625_ ps.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109222625_ ps.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Migrations\\20250109222625_ ps.cs",
@@ -265,12 +258,11 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109222625_ ps.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:26:25.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:26:25.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "20250109222157_PS.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109222157_PS.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Migrations\\20250109222157_PS.cs",
@@ -278,12 +270,11 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109222157_PS.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:21:57.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:21:57.343Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "20250109221642_sql.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109221642_sql.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Migrations\\20250109221642_sql.cs",
@@ -291,12 +282,11 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109221642_sql.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:16:42.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:16:42.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "20250109221525_add postgre.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109221525_add postgre.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Migrations\\20250109221525_add postgre.cs",
@@ -304,12 +294,11 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109221525_add postgre.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T22:15:25.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T22:15:25.821Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "20250109215646_add PostgreSQL.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Migrations\\20250109215646_add PostgreSQL.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Migrations\\20250109215646_add PostgreSQL.cs",
@@ -317,12 +306,11 @@
               "RelativeToolTip": "src\\Infrastucture\\Migrations\\20250109215646_add PostgreSQL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T21:56:46.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T21:56:46.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "Web.csproj",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
               "RelativeDocumentMoniker": "src\\Web\\Web.csproj",
@@ -342,8 +330,7 @@
               "RelativeToolTip": "src\\Application\\Services\\BarberShopService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAkwD4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T20:56:48.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T20:56:48.769Z"
             },
             {
               "$type": "Document",
@@ -355,12 +342,11 @@
               "RelativeToolTip": "src\\Domain\\Entities\\BarberShop.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAiwBoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T20:56:25.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T20:56:25.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "IBarberShopRepository.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Domain\\Interfaces\\IBarberShopRepository.cs",
               "RelativeDocumentMoniker": "src\\Domain\\Interfaces\\IBarberShopRepository.cs",
@@ -372,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "BarberShopRepository.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Data\\BarberShopRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastucture\\Data\\BarberShopRepository.cs",
@@ -392,12 +378,11 @@
               "RelativeToolTip": "src\\Web\\Controllers\\BarberShopController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowCMAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T20:51:49.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T20:51:49.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "ShiftController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Controllers\\ShiftController.cs",
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\ShiftController.cs",
@@ -409,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "ShiftService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Services\\ShiftService.cs",
               "RelativeDocumentMoniker": "src\\Application\\Services\\ShiftService.cs",
@@ -417,8 +402,7 @@
               "RelativeToolTip": "src\\Application\\Services\\ShiftService.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAnwEgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T17:55:26.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T17:55:26.031Z"
             },
             {
               "$type": "Document",
@@ -430,12 +414,11 @@
               "RelativeToolTip": "src\\Application\\Services\\ServicesAndHaircutsService.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAAAEkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T22:55:06.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T22:55:06.631Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "ShiftRequest.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Models\\ShiftDtos\\ShiftRequest.cs",
               "RelativeDocumentMoniker": "src\\Application\\Models\\ShiftDtos\\ShiftRequest.cs",
@@ -443,8 +426,7 @@
               "RelativeToolTip": "src\\Application\\Models\\ShiftDtos\\ShiftRequest.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAD4vxgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T22:54:27.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T22:54:27.888Z"
             },
             {
               "$type": "Document",
@@ -456,25 +438,24 @@
               "RelativeToolTip": "src\\Infrastucture\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAYwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:49:31.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:49:31.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Web\\appsettings.json",
               "ToolTip": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\appsettings.json",
               "RelativeToolTip": "src\\Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-01-04T15:44:39.024Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "src\\Application\\Interfaces\\IUserService.cs",
@@ -482,8 +463,7 @@
               "RelativeToolTip": "src\\Application\\Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAkwBEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:41:34.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:41:34.661Z"
             },
             {
               "$type": "Document",
@@ -495,12 +475,11 @@
               "RelativeToolTip": "src\\Application\\Services\\UserService.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAhwGEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:38:35.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:38:35.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\UserController.cs",
@@ -512,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "UserLoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Models\\AuthDtos\\UserLoginRequest.cs",
               "RelativeDocumentMoniker": "src\\Application\\Models\\AuthDtos\\UserLoginRequest.cs",
@@ -520,8 +499,7 @@
               "RelativeToolTip": "src\\Application\\Models\\AuthDtos\\UserLoginRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:36:52.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:36:52.34Z"
             },
             {
               "$type": "Document",
@@ -533,8 +511,7 @@
               "RelativeToolTip": "src\\Application\\Models\\UserDtos\\UserDto.cs",
               "ViewState": "AgIAABwAAAAAAAAAAIA6wCUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:36:39.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:36:39.304Z"
             },
             {
               "$type": "Document",
@@ -546,12 +523,11 @@
               "RelativeToolTip": "src\\Application\\Models\\UserDtos\\UserAdminRequest.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAxwCQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:33:43.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:33:43.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Domain\\Enums\\Role.cs",
               "RelativeDocumentMoniker": "src\\Domain\\Enums\\Role.cs",
@@ -559,8 +535,7 @@
               "RelativeToolTip": "src\\Domain\\Enums\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:32:49.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:32:49.329Z"
             },
             {
               "$type": "Document",
@@ -572,8 +547,7 @@
               "RelativeToolTip": "src\\Application\\Models\\UserDtos\\UserRequest.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAqwCUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:32:38.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T15:32:38.284Z"
             },
             {
               "$type": "Document",
@@ -585,12 +559,11 @@
               "RelativeToolTip": "src\\Web\\Program.cs",
               "ViewState": "AgIAAGoAAAAAAAAAAAAuwG4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T18:37:15.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T18:37:15.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\AuthenticationController.cs",
@@ -602,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "Shift.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Domain\\Entities\\Shift.cs",
               "RelativeDocumentMoniker": "src\\Domain\\Entities\\Shift.cs",
@@ -614,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "ShiftDto.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Models\\ShiftDtos\\ShiftDto.cs",
               "RelativeDocumentMoniker": "src\\Application\\Models\\ShiftDtos\\ShiftDto.cs",
@@ -622,12 +595,11 @@
               "RelativeToolTip": "src\\Application\\Models\\ShiftDtos\\ShiftDto.cs",
               "ViewState": "AgIAACgAAAAAAAAAAIAwwAoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T22:41:13.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T22:41:13.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "src\\Domain\\Entities\\User.cs",
@@ -640,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "ServiceController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\ServiceController.cs",
