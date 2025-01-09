@@ -41,7 +41,7 @@ namespace Infrastructure.Services
             if (user == null) return null;
 
 
-            if (user.IsActive == false) return null;
+            if (user.IsActive == 0) return null;
 
             if (authenticationRequest.Email == user.Email && user.Password == authenticationRequest.Password) return user;
 

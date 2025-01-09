@@ -35,7 +35,7 @@ namespace Application.Models.UserDtos
             user.Email = userDto.Email;
             user.Password = userDto.Password;
             user.Role = Role.Client;
-            user.IsActive = true;
+            user.IsActive = 1;
            
 
             return user;

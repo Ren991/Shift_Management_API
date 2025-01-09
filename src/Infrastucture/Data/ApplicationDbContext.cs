@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection.Emit;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace Infrastructure.Data
 {
@@ -22,6 +23,14 @@ namespace Infrastructure.Data
         {
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=appBarberia;Username=appBarberia;Password=appBarberia");
+            }
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(entity =>
@@ -33,18 +42,7 @@ namespace Infrastructure.Data
                       
             });
 
-            modelBuilder.Entity<User>().HasData(
-                new User
-                {
-                    Id = 10,
-                    FirstName = "Admin",
-                    LastName = "User",
-                    Email = "admin@mati.com",
-                    Password = "123321", 
-                    Role = Role.Admin,
-                    IsActive = true
-                }
-            );
+
 
             modelBuilder.Entity<Shift>()
                 .HasOne(s => s.User)

@@ -24,7 +24,7 @@ namespace Application.Models.UserDtos
 
             
 
-            public bool IsActive { get; set; }
+            public int IsActive { get; set; }
 
             public static UserDto ToDto(User user)
             {
@@ -35,7 +35,7 @@ namespace Application.Models.UserDtos
                 userDto.Email = user.Email;
                 userDto.Password = user.Password;
                 userDto.Role = user.Role;
-                userDto.IsActive = user.IsActive;
+                userDto.IsActive = 1;
 
                 return userDto;
 
