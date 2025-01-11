@@ -448,7 +448,7 @@
               "RelativeDocumentMoniker": "src\\Web\\appsettings.json",
               "ToolTip": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\appsettings.json",
               "RelativeToolTip": "src\\Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-01-04T15:44:39.024Z",
               "EditorCaption": ""
@@ -607,8 +607,7 @@
               "RelativeToolTip": "src\\Domain\\Entities\\User.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAgwBAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T22:32:11.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T22:32:11.488Z"
             },
             {
               "$type": "Document",
