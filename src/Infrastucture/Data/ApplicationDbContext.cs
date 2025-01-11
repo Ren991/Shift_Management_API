@@ -27,7 +27,9 @@ namespace Infrastructure.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=appBarberia;Username=appBarberia;Password=appBarberia");
+                // Usar MySQL en lugar de PostgreSQL
+                optionsBuilder.UseMySql("Server=localhost;Port=3306;Database=appBarberia;User=appBarberia;Password=appBarberia;", 
+                    new MySqlServerVersion(new Version(8, 0, 25))); // Usa la versión de MySQL que tengas instalada
             }
         }
 

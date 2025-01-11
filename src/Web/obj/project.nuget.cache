@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "fMZ7dDwy6jE=",
-  "success": true,
+  "dgSpecHash": "G/hMkXAsu54=",
+  "success": false,
   "projectFilePath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\bcrypt\\1.0.0\\bcrypt.1.0.0.nupkg.sha512",
@@ -52,8 +52,10 @@
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.1.1\\microsoft.identitymodel.tokens.8.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.2\\npgsql.entityframeworkcore.postgresql.9.0.2.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.2\\pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\servicestack\\8.4.0\\servicestack.8.4.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\servicestack.client\\8.4.0\\servicestack.client.8.4.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\servicestack.common\\8.4.0\\servicestack.common.8.4.0.nupkg.sha512",
@@ -92,6 +94,15 @@
       "warningLevel": 1,
       "message": "El paquete \"BCrypt 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "BCrypt",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1107",
+      "level": "Error",
+      "message": "Se detectó un conflicto de versiones para Microsoft.EntityFrameworkCore.Relational. Para resolver este problema, instale o haga referencia a Microsoft.EntityFrameworkCore.Relational 9.0.0 directamente en el proyecto Web. \r\n Web -> Microsoft.EntityFrameworkCore.Tools 9.0.0 -> Microsoft.EntityFrameworkCore.Design 9.0.0 -> Microsoft.EntityFrameworkCore.Relational (>= 9.0.0) \r\n Web -> Infrastucture -> Pomelo.EntityFrameworkCore.MySql 8.0.2 -> Microsoft.EntityFrameworkCore.Relational (>= 8.0.2 && <= 8.0.999).",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
       "targetGraphs": [
         "net8.0"
       ]
