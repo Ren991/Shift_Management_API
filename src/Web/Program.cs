@@ -49,11 +49,11 @@ builder.Services.AddSwaggerGen(setupAction =>
 });
 
 // Obtener la cadena de conexión de MySQL desde el archivo de configuración
-string connectionString = builder.Configuration.GetConnectionString("MySqlConnection");
+string connectionString = builder.Configuration.GetConnectionString("PostgresConnection");
 
 // Configurar DbContext para usar MySQL
-builder.Services.AddDbContext<ApplicationDbContext>(dbContextOptions =>
-    dbContextOptions.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 25))));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 
 builder.Services.Configure<AuthenticationServiceOptions>(

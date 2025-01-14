@@ -1013,22 +1013,6 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
-      "MySqlConnector/2.3.5": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "7.0.1"
-        },
-        "compile": {
-          "lib/net8.0/MySqlConnector.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/MySqlConnector.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Npgsql/9.0.2": {
         "type": "package",
         "dependencies": {
@@ -1059,23 +1043,6 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Pomelo.EntityFrameworkCore.MySql/8.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "[8.0.2, 8.0.999]",
-          "MySqlConnector": "2.3.5"
-        },
-        "compile": {
-          "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
             "related": ".xml"
           }
         }
@@ -1691,7 +1658,6 @@
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.2",
-          "Pomelo.EntityFrameworkCore.MySql": "8.0.2",
           "System.IdentityModel.Tokens.Jwt": "8.1.1"
         },
         "compile": {
@@ -3917,35 +3883,6 @@
         "readme.md"
       ]
     },
-    "MySqlConnector/2.3.5": {
-      "sha512": "AmEfUPkFl+Ev6jJ8Dhns3CYHBfD12RHzGYWuLt6DfG6/af6YvOMyPz74ZPPjBYQGRJkumD2Z48Kqm8s5DJuhLA==",
-      "type": "package",
-      "path": "mysqlconnector/2.3.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net462/MySqlConnector.dll",
-        "lib/net462/MySqlConnector.xml",
-        "lib/net471/MySqlConnector.dll",
-        "lib/net471/MySqlConnector.xml",
-        "lib/net48/MySqlConnector.dll",
-        "lib/net48/MySqlConnector.xml",
-        "lib/net6.0/MySqlConnector.dll",
-        "lib/net6.0/MySqlConnector.xml",
-        "lib/net7.0/MySqlConnector.dll",
-        "lib/net7.0/MySqlConnector.xml",
-        "lib/net8.0/MySqlConnector.dll",
-        "lib/net8.0/MySqlConnector.xml",
-        "lib/netstandard2.0/MySqlConnector.dll",
-        "lib/netstandard2.0/MySqlConnector.xml",
-        "lib/netstandard2.1/MySqlConnector.dll",
-        "lib/netstandard2.1/MySqlConnector.xml",
-        "logo.png",
-        "mysqlconnector.2.3.5.nupkg.sha512",
-        "mysqlconnector.nuspec"
-      ]
-    },
     "Npgsql/9.0.2": {
       "sha512": "hCbO8box7i/XXiTFqCJ3GoowyLqx3JXxyrbOJ6om7dr+eAknvBNhhUHeJVGAQo44sySZTfdVffp4BrtPeLZOAA==",
       "type": "package",
@@ -3976,21 +3913,6 @@
         "npgsql.entityframeworkcore.postgresql.9.0.2.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
-      ]
-    },
-    "Pomelo.EntityFrameworkCore.MySql/8.0.2": {
-      "sha512": "XjnlcxVBLnEMbyEc5cZzgZeDyLvAniACZQ04W1slWN0f4rmfNzl98gEMvHnFH0fMDF06z9MmgGi/Sr7hJ+BVnw==",
-      "type": "package",
-      "path": "pomelo.entityframeworkcore.mysql/8.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "icon.png",
-        "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll",
-        "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.xml",
-        "pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
-        "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
     "ServiceStack/8.4.0": {
@@ -4784,19 +4706,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\Renzo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
+      "projectUniqueName": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\obj\\",
+      "projectPath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\Web.csproj",
+      "packagesPath": "C:\\Users\\Renzo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Renzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4804,18 +4726,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Application.csproj"
+            "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Application.csproj"
             },
-            "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Infrastucture.csproj": {
-              "projectPath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Infrastucture\\Infrastucture.csproj"
+            "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Infrastucture\\Infrastucture.csproj": {
+              "projectPath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Infrastucture\\Infrastucture.csproj"
             }
           }
         }
@@ -4885,7 +4806,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -4896,15 +4817,6 @@
       "warningLevel": 1,
       "message": "El paquete \"BCrypt 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "BCrypt",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1107",
-      "level": "Error",
-      "message": "Se detectó un conflicto de versiones para Microsoft.EntityFrameworkCore.Relational. Para resolver este problema, instale o haga referencia a Microsoft.EntityFrameworkCore.Relational 9.0.0 directamente en el proyecto Web. \r\n Web -> Microsoft.EntityFrameworkCore.Tools 9.0.0 -> Microsoft.EntityFrameworkCore.Design 9.0.0 -> Microsoft.EntityFrameworkCore.Relational (>= 9.0.0) \r\n Web -> Infrastucture -> Pomelo.EntityFrameworkCore.MySql 8.0.2 -> Microsoft.EntityFrameworkCore.Relational (>= 8.0.2 && <= 8.0.999).",
-      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
       "targetGraphs": [
         "net8.0"
       ]

@@ -25,12 +25,7 @@ namespace Infrastructure.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                // Usar MySQL en lugar de PostgreSQL
-                optionsBuilder.UseMySql("Server=localhost;Port=3306;Database=appBarberia;User=appBarberia;Password=appBarberia;", 
-                    new MySqlServerVersion(new Version(8, 0, 25))); // Usa la versión de MySQL que tengas instalada
-            }
+           
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -44,6 +39,17 @@ namespace Infrastructure.Data
                       
             });
 
+            modelBuilder.Entity<User>().HasData(new User
+            {
+                Id = 1,
+                Email = "admin@example.com",
+                Password = "123321", // Nota: Siempre almacena las contraseñas como hash en producción
+                Role = Role.Admin, 
+                FirstName = "Admin",
+                LastName = "123",
+                IsActive = 1
+
+            });
 
 
             modelBuilder.Entity<Shift>()

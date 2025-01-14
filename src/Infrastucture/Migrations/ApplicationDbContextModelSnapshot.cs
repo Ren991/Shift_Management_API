@@ -152,6 +152,18 @@ namespace Infrastucture.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "admin@example.com",
+                            FirstName = "Admin",
+                            IsActive = 1,
+                            LastName = "123",
+                            Password = "123321",
+                            Role = 0
+                        });
                 });
 
             modelBuilder.Entity("ShiftService", b =>
