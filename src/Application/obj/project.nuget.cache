@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YFLF6AmPeFaHn1J5YxxDhtxPaC2fgKYJyv1xFRX/E7Z09CKifWfWk8PaEXuSQTYHvu2SfnJXZg0cgccPoDikhg==",
+  "dgSpecHash": "994FDNsnQMw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Renzo\\Documents\\shift_management\\shift_management_API\\Shift_Management_API\\src\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Renzo\\.nuget\\packages\\bcrypt\\1.0.0\\bcrypt.1.0.0.nupkg.sha512"
+    "C:\\Users\\PC\\.nuget\\packages\\bcrypt\\1.0.0\\bcrypt.1.0.0.nupkg.sha512"
   ],
   "logs": [
     {

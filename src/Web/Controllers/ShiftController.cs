@@ -1,7 +1,9 @@
 ﻿using Application.Interfaces;
 using Application.Models.ShiftDtos;
+using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ServiceStack;
 
 namespace Web.Controllers
 {
@@ -96,6 +98,24 @@ namespace Web.Controllers
                 return BadRequest(new { Error = ex.Message });
             }
         }
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("{shiftId}")]
+        public async Task<IActionResult> DeleteShift([FromRoute] int shiftId)
+        {
+            try
+            {
+                // Llama al método DeleteShift del servicio
+                await _shiftService.DeleteShift(shiftId);
+                return Ok(new { message = "Shift deleted successfully." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
 
     }
 }

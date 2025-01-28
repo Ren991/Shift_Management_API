@@ -24,5 +24,7 @@ namespace Application.Interfaces
         Task CancelShift(int shiftId, int userId);
 
         Task CreatePredefinedShifts(int month, int year, int barberShopID);
+
+       Task DeleteShift(int shiftId);
     }
 }
