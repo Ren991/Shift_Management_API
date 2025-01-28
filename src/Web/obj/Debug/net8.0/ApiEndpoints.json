@@ -179,6 +179,22 @@
   },
   {
     "ContainingType": "Web.Controllers.ShiftController",
+    "Method": "DeleteShift",
+    "RelativePath": "api/Shift/{shiftId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shiftId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.ShiftController",
     "Method": "CancelShift",
     "RelativePath": "api/Shift/cancel-shift",
     "HttpMethod": "PUT",
