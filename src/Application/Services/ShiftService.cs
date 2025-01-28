@@ -208,5 +208,34 @@ namespace Application.Services
             await _shiftRepository.SaveChangesAsync();
         }
 
+        public Shift GetById(int id)
+        {
+            return _shiftRepository.Get(id); // Método que busca por ID
+        }
+
+        public void Delete(Shift shift)
+        {
+            _shiftRepository.Delete(shift); // Llama al método Delete del repositorio base
+        }
+
+
+        public async Task DeleteShift(int shiftId)
+        {
+            // Busca el turno en la base de datos
+            var shift = _shiftRepository.GetById(shiftId);
+
+            if (shift == null)
+            {
+                throw new Exception("Shift not found.");
+            }
+
+            // Llama al método Delete del repositorio para eliminar el turno
+            _shiftRepository.Delete(shift);
+
+            // Guarda los cambios en la base de datos
+            await _shiftRepository.SaveChangesAsync();
+        }
+
     }
+
 }

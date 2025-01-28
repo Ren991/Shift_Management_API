@@ -20,6 +20,8 @@ namespace Domain.Interfaces
 
         Task<List<Shift>> GetByBarberShopAndDay(int barberShopId, DateOnly day);
 
+        Shift GetById(int id);
 
+        void Delete(Shift shift);
     }
 }
