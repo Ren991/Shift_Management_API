@@ -107,5 +107,13 @@ namespace Infrastucture.Data
                 .ToListAsync();
         }
 
+        public Shift GetById(int id)
+        {
+            return _context.Shift
+                           .Include(s => s.Services) // Incluye servicios relacionados si es necesario
+                           .FirstOrDefault(s => s.Id == id);
+        }
+
+
     }
 }
