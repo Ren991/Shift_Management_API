@@ -106,8 +106,7 @@
               "RelativeToolTip": "src\\Infrastucture\\Data\\ShiftRepository.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAAwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T22:37:11.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T22:37:11.415Z"
             },
             {
               "$type": "Document",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "src\\Application\\Interfaces\\IShiftService.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAA9wBsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T22:19:38.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T22:19:38.044Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "src\\Domain\\Interfaces\\IShiftRepository.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAIwBgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T22:12:59.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T22:12:59.816Z"
             },
             {
               "$type": "Document",
@@ -145,8 +142,7 @@
               "RelativeToolTip": "src\\Infrastucture\\Data\\RepositoryBase.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwBgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T22:01:04.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T22:01:04.699Z"
             },
             {
               "$type": "Document",
@@ -205,7 +201,7 @@
               "RelativeDocumentMoniker": "src\\Web\\Controllers\\ShiftController.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive - UCA\\Proyectos Individuales 2024\\Aplicacion Barberia\\Shift_Management_API\\Shift_Management_API\\src\\Web\\Controllers\\ShiftController.cs*",
               "RelativeToolTip": "src\\Web\\Controllers\\ShiftController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAwEcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-20T17:22:38.412Z",
               "EditorCaption": ""

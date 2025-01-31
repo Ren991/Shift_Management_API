@@ -69,7 +69,7 @@ namespace Web.Controllers
 
         [Authorize(Roles="Client")]
         [HttpGet("get-shifts-by-user")]
-        public IActionResult GetShiftsById()
+        public async Task<IActionResult> GetShiftsById()
         {
             var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
 
@@ -78,7 +78,7 @@ namespace Web.Controllers
                 throw new Exception("User ID is not valid.");
             }
 
-            var shifts = _shiftService.GetShiftByUser(userId);
+            var shifts = await _shiftService.GetShiftByUser(userId);
             return Ok(shifts);
         }
 
