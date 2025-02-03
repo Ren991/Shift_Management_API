@@ -17,7 +17,7 @@ namespace Web.Controllers
             _shiftService = shiftService;
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Client")]
         [HttpGet]
         public IActionResult GetAll()
         {
