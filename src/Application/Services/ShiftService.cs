@@ -131,7 +131,7 @@ namespace Application.Services
 
             var shiftDateTime = DateTime.ParseExact(
                 $"{shift.Day} {shift.ShiftTime}",
-                "dd/MM/yyyy HH:mm", // Cambiado el formato al esperado
+                "d/M/yyyy HH:mm", // Cambiado el formato al esperado
                 CultureInfo.InvariantCulture
             );
 
